@@ -10,6 +10,6 @@ package torusristinolla.logic;
  *
  * @author Annaleena
  */
-public class GameBoard {
+public class SquareState {
     
 }
