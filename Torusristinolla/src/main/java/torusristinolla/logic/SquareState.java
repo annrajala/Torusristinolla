@@ -1,15 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package torusristinolla.logic;
 
-/**
- *
- * @author Annaleena
- */
-public class SquareState {
-    
+//Määritellään ruudun tila samalla tavalla, kuin ohjelmointikursseilla määriteltiin esim. korttipakan maat
+public enum SquareState {
+    CROSS, CIRCLE, EMPTY;
 }

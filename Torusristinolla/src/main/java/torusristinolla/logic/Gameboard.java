@@ -2,22 +2,28 @@ package torusristinolla.logic;
 
 public class Gameboard {
     
-    private Square[]lauta;
+    private Square[][] board;
     private int width;
     private int height;
     
     public Gameboard(int width, int height) {
         width = width;
         height = height;
-        createBoard(width, height);
+        board = createBoard(width, height);
     }
     
-    private void createBoard(int width, int height) {
-        lauta = new Square[width*height];
+    
+    // Luodaan pelilauta taulukkona ruutuja.
+    private Square[][] createBoard(int width, int height) {
+        Square[][] ruudukko = new Square[width][height];
         
-        for(int i=0; i < lauta.length; i++) {
-            lauta[i] = new Square();
+        for(int i = 0; i < width; i++) {
+            for(int a = 0; a < height; a++) {
+                ruudukko[i][a] = new Square();
+            }
         }
+        
+        return ruudukko;
     }
     
     public int getWidth() {
@@ -28,9 +34,8 @@ public class Gameboard {
         return height;
     }
     
-    public Square[] getLauta() {
-        return lauta;
+    public Square[][] getLauta() {
+        return board;
     }
-    
     
 }
