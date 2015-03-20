@@ -1,3 +1,3 @@
 # Torusristinolla
 
-Tavallista ristinollaa pienellä twistillä.
+Ristinollaa pienellä twistillä.

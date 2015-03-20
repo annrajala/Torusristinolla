@@ -6,20 +6,21 @@ public class Gameboard {
     private int width;
     private int height;
     
-    public Gameboard(int width, int height) {
-        width = width;
-        height = height;
-        board = createBoard(width, height);
+    //MITÄ JOS ON EPÄSOPIVAT PARAMETRIT? MINIMILAUTA?!
+    public Gameboard(int height, int width) {
+        this.height = height;
+        this.width = width;
+        this.board = createBoard(height, width);
     }
     
     
     // Luodaan pelilauta taulukkona ruutuja.
-    private Square[][] createBoard(int width, int height) {
-        Square[][] ruudukko = new Square[width][height];
+    private Square[][] createBoard(int height, int width) {
+        Square[][] ruudukko = new Square[height][width];
         
-        for(int i = 0; i < width; i++) {
-            for(int a = 0; a < height; a++) {
-                ruudukko[i][a] = new Square();
+        for(int rivi = 0; rivi < height; rivi++) {
+            for(int sarake = 0; sarake < width; sarake++) {
+                ruudukko[rivi][sarake] = new Square();
             }
         }
         
@@ -36,6 +37,10 @@ public class Gameboard {
     
     public Square[][] getLauta() {
         return board;
+    }
+    
+    public void setToken(int x, int y, Token token) {
+        board[x][y].setState(token);
     }
     
 }

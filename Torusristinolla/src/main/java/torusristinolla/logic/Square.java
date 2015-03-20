@@ -2,19 +2,19 @@ package torusristinolla.logic;
 
 public class Square {
     
-    //Käytetään tilan ilmaisemiseen luokkaa SquareState, jotta meidän ei tarvitse turvautua merkkijonoihin
-    private SquareState state;
+    //Käytetään tilan ilmaisemiseen SquareStatea, jotta meidän ei tarvitse turvautua merkkijonoihin
+    private Token state;
     
     public Square() {
-        state = SquareState.EMPTY;
+        this.state = Token.EMPTY;
     }
     
-    public SquareState getState() {
+    public Token getToken() {
         return state;
     }
     
-    public void setState(SquareState tila) {
-        state = state;
+    public void setState(Token tila) {
+        state = tila;
     }
     
    
