@@ -5,7 +5,7 @@ public class Pelaaja {
     private String nickname;
     
     public Pelaaja(Token merkki, String name) {
-        this.token = token;
+        this.token = merkki;
         this.nickname = name;
     }
     

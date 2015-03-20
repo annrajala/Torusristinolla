@@ -3,18 +3,18 @@ package torusristinolla.logic;
 public class Square {
     
     //Käytetään tilan ilmaisemiseen SquareStatea, jotta meidän ei tarvitse turvautua merkkijonoihin
-    private Token state;
+    private Token token;
     
     public Square() {
-        this.state = Token.EMPTY;
+        this.token = Token.EMPTY;
     }
     
     public Token getToken() {
-        return state;
+        return token;
     }
     
-    public void setState(Token tila) {
-        state = tila;
+    public void setToken(Token merkki) {
+        token = merkki;
     }
     
    

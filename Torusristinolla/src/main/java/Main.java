@@ -16,5 +16,21 @@ public class Main {
         System.out.println("");
         peli.playOneTurn(1, 1);
         peli.printGameboardInCurrentState();
+        System.out.println("");
+        peli.playOneTurn(0, 0);
+        peli.printGameboardInCurrentState();
+        System.out.println("");
+        peli.playOneTurn(0, 1);
+        peli.printGameboardInCurrentState();
+        System.out.println("");
+        peli.playOneTurn(2, 2);
+        peli.printGameboardInCurrentState();
+        System.out.println("");
+        peli.playOneTurn(2, 1);
+        peli.printGameboardInCurrentState();
+        System.out.println("");
+        if(peli.isThereAWinner()) {
+            System.out.println("JEE");
+        }
     }
 }

@@ -45,7 +45,7 @@ public class Game {
         }
     }
     
-    private boolean playerIsOnBoard(int x, int y) {
+    public boolean playerIsOnBoard(int x, int y) {
         return (x >= 0 && x < board.getWidth() && y >= 0 && y < board.getHeight());
     }
     
@@ -57,7 +57,7 @@ public class Game {
     
     //TOIMII VASTA 3x3-RUUDUKOLLA 
     private boolean horizontalWinningLine(int x, int y, Token token) {
-        Square[][] lauta = board.getLauta();
+        Square[][] lauta = board.getBoard();
         
         if((x-2 >= 0 && x-1 >= 0 && lauta[x-2][y].getToken() == token && lauta[x-1][y].getToken() == token)
             || (x-1 >= 0 && x+1 < board.getWidth() && lauta[x-1][y].getToken() == token && lauta[x+1][y].getToken() == token)
@@ -70,7 +70,7 @@ public class Game {
     
     //TOIMII VASTA 3x3-RUUDUKOLLA
     private boolean verticalWinningLine(int x, int y, Token token) {
-        Square[][] lauta = board.getLauta();
+        Square[][] lauta = board.getBoard();
         
         if((y-2 >= 0 && y-1 >= 0 && lauta[x][y-2].getToken() == token && lauta[x][y-1].getToken() == token)
             || (y-1 >= 0 && y+1 < board.getWidth() && lauta[x][y-1].getToken() == token && lauta[x][y+1].getToken() == token)
@@ -90,12 +90,12 @@ public class Game {
     //    return turn;
     //}
     
-    //private boolean isThereAWinner() {
-    //    return win;
-    //}
+    public boolean isThereAWinner() {
+        return win;
+    }
     
     public void printGameboardInCurrentState() {
-        Square[][] lauta = board.getLauta();
+        Square[][] lauta = board.getBoard();
         
         
         for(int rivi = 0; rivi < board.getHeight(); rivi++) {

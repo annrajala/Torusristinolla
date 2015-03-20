@@ -7,6 +7,7 @@ public class Gameboard {
     private int height;
     
     //MITÄ JOS ON EPÄSOPIVAT PARAMETRIT? MINIMILAUTA?!
+    //SAAKO OLLA EPÄNELIÖ?
     public Gameboard(int height, int width) {
         this.height = height;
         this.width = width;
@@ -35,12 +36,12 @@ public class Gameboard {
         return height;
     }
     
-    public Square[][] getLauta() {
+    public Square[][] getBoard() {
         return board;
     }
     
     public void setToken(int x, int y, Token token) {
-        board[x][y].setState(token);
+        board[x][y].setToken(token);
     }
     
 }
