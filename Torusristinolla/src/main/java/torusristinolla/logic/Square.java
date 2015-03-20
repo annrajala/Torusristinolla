@@ -2,7 +2,6 @@ package torusristinolla.logic;
 
 public class Square {
     
-    //Käytetään tilan ilmaisemiseen SquareStatea, jotta meidän ei tarvitse turvautua merkkijonoihin
     private Token token;
     
     public Square() {
