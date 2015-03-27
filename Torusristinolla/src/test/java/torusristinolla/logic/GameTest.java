@@ -10,9 +10,11 @@ import static org.junit.Assert.*;
 
 public class GameTest {
     
+    //PITÄÄ VIELÄ TESTATA TORUSPINTAA HYÖDYNTÄVÄÄ VINOA VOITTOSUORAA ENEMMÄN!!! (8 tapausta puuttuu)
+    
     private Game game;
     private Pelaaja pelaaja1;
-    private Pelaaja pelaaja2; //Ei ole keinoa pelin kautta hakea pelaajia. ONGELMA???
+    private Pelaaja pelaaja2; //Ei ole keinoa pelin kautta hakea pelaajia. ONGELMA?
 
     @Before
     public void setUp() {
@@ -37,9 +39,6 @@ public class GameTest {
     public void inTheBeginningThereIsNoWinner() {
         assertEquals(false, game.isThereAWinner());
     }
-    
-    
-    //PITÄISIKÖ OLLA ENEMMÄN ERI VOITTOTAPAUKSIA TESTATTAVANA?!
     
     @Test
     public void doesHorizontalWinningWorkWithNormalVisualWinningLine() {
@@ -101,5 +100,43 @@ public class GameTest {
         assertEquals(true, game.isThereAWinner());
     }
     
-    //TESTAA VINOA VOITTOSUORAA NIIN MAAN PERKELEESTI!
+    @Test
+    public void doesDiagonalWinningWorWithTokenInTheTopLeftCorner() {
+        game.playOneTurn(0, 0);
+        game.playOneTurn(0, 1);
+        game.playOneTurn(3, 2);
+        game.playOneTurn(2, 1);
+        game.playOneTurn(2, 3);
+        assertEquals(true, game.isThereAWinner());
+    }
+    
+    @Test
+    public void doesDiagonalWinningWorWithTokenInTheTopRightCorner() {
+        game.playOneTurn(0, 3);
+        game.playOneTurn(0, 1);
+        game.playOneTurn(2, 0);
+        game.playOneTurn(2, 1);
+        game.playOneTurn(3, 1);
+        assertEquals(true, game.isThereAWinner());
+    }
+    
+    @Test
+    public void doesDiagonalWinningWorWithTokenInTheBottomRightCorner() {
+        game.playOneTurn(3, 3);
+        game.playOneTurn(0, 1);
+        game.playOneTurn(1, 0);
+        game.playOneTurn(2, 1);
+        game.playOneTurn(0, 1);
+        assertEquals(true, game.isThereAWinner());
+    }
+    
+    @Test
+    public void doesDiagonalWinningWorWithTokenInTheBottomLeftCorner() {
+        game.playOneTurn(3, 0);
+        game.playOneTurn(0, 1);
+        game.playOneTurn(0, 2);
+        game.playOneTurn(2, 1);
+        game.playOneTurn(1, 3);
+        assertEquals(true, game.isThereAWinner());
+    }
 }

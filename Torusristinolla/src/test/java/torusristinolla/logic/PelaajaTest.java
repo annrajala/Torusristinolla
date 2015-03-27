@@ -28,4 +28,10 @@ public class PelaajaTest {
     public void getTokenReturnsPlayersToken() {
         assertEquals(Token.CIRCLE, pelaaja.getToken());
     }
+    
+    @Test
+    public void doesChangeTokenWork() {
+        pelaaja.changeToken();
+        assertEquals(Token.CROSS, pelaaja.getToken());
+    }
 }

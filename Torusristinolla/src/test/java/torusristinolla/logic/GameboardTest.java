@@ -56,7 +56,6 @@ public class GameboardTest {
         assertEquals(3, gb.getWidth());
     }
     
-    //Onkohan tää nyt ihan oikein?
     @Test
     public void getBoardReturnsRightSizeTable() {
         assertEquals(3, gb.getBoard().length);

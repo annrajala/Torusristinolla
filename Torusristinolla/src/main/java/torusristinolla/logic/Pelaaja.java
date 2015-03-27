@@ -16,4 +16,12 @@ public class Pelaaja {
     public Token getToken() {
         return this.token;
     }
+    
+    public void changeToken() {
+        if(this.token == Token.CIRCLE) {
+            this.token = Token.CROSS;
+        } else {
+            this.token = Token.CIRCLE;
+        }
+    }
 }
