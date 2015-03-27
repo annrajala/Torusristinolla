@@ -10,7 +10,8 @@ import static org.junit.Assert.*;
 
 public class GameTest {
     
-    //PITÄÄ VIELÄ TESTATA TORUSPINTAA HYÖDYNTÄVÄÄ VINOA VOITTOSUORAA ENEMMÄN!!! (8 tapausta puuttuu)
+    //PITÄÄ VIELÄ TESTATA TORUSPINTAA HYÖDYNTÄVÄÄ VINOA VOITTOSUORAA ENEMMÄN (lisää tapauksia)
+    //LISÄÄ TAPAUKSIA MYÖS VAAKA- JA PYSTYSUORIIN
     
     private Game game;
     private Pelaaja pelaaja1;
