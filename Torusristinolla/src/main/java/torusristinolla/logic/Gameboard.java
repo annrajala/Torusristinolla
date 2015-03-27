@@ -7,11 +7,15 @@ public class Gameboard {
     private int height;
     
     //MITÄ JOS ON EPÄSOPIVAT PARAMETRIT? MINIMILAUTA?!
-    //SAAKO OLLA EPÄNELIÖ?
     public Gameboard(int height, int width) {
-        this.height = height;
-        this.width = width;
-        this.board = createBoard(height, width);
+        if((height != width) || (height < 3) || (width < 3)) {
+            this.height = 3;
+            this.width = 3;
+        } else {
+            this.height = height;
+            this.width = width;
+        }
+        this.board = createBoard(this.height, this.width);
     }
     
     
@@ -28,12 +32,9 @@ public class Gameboard {
         return ruudukko;
     }
     
+    //Huom. ei tarvita metodia getHeight, koska width == height
     public int getWidth() {
         return width;
-    }
-    
-    public int getHeight() {
-        return height;
     }
     
     public Square[][] getBoard() {
@@ -42,6 +43,10 @@ public class Gameboard {
     
     public void setToken(int x, int y, Token token) {
         board[x][y].setToken(token);
+    }
+    
+    public Token getToken(int x, int y) {
+        return board[x][y].getToken();
     }
     
 }

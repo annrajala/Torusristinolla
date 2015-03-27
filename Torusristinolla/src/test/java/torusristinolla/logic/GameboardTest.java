@@ -20,13 +20,40 @@ public class GameboardTest {
     }
     
     @Test
-    public void getWidthReturnsWidth() {
+    public void setTokenSetsTokenRight() {
+        gb.setToken(0, 0, Token.CROSS);
+        Square[][] lauta = gb.getBoard();
+        assertEquals(Token.CROSS, lauta[0][0].getToken());
+    }
+    
+    @Test
+    public void getTokenReturnsRightToken() {
+        Square[][] lauta = gb.getBoard();
+        lauta[0][0].setToken(Token.CIRCLE);
+        assertEquals(Token.CIRCLE, gb.getToken(0,0));
+    }
+    
+    @Test
+    public void gameboardIs3x3SquareIfGivenUnmatchingParametres() {
+        gb = new Gameboard(3,5);
         assertEquals(3, gb.getWidth());
     }
     
     @Test
-    public void getHeightReturnsHeight() {
-        assertEquals(3, gb.getHeight());
+    public void gameboardIs3x3SquareIfGivenWidthSmallerThanThree() {
+        gb = new Gameboard(3,2);
+        assertEquals(3, gb.getWidth());
+    }
+    
+    @Test
+    public void gameboardIs3x3SquareIfGivenHeightSmallerThanThree() {
+        gb = new Gameboard(2,3);
+        assertEquals(3, gb.getWidth());
+    }
+    
+    @Test
+    public void getWidthReturnsWidth() {
+        assertEquals(3, gb.getWidth());
     }
     
     //Onkohan tää nyt ihan oikein?

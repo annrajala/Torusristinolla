@@ -23,3 +23,14 @@ TUNTIKIRJANPITO
 - Testausta
 - Kokeilua
 - Metodien muokkausta ja uusien tekemistä
+
+25.3. keskiviikko 5 h
+- Logiikan tekeminen mielivaltaisen kokoiselle ruudukolle
+- Pelilaudan koon määritteleminen
+- Testausta
+- Aikaa vievää refaktorointia
+
+27.3. perjantai 7 h
+- Refaktorointia 
+- Käyttöliittymän suunnittelua
+- Testausta
