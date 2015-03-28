@@ -10,7 +10,7 @@ import torusristinolla.logic.Token;
 
 public class Main {
     public static void main( String[] args ) {
-        Player karo = new Player(Token.CIRCLE, "Karo");
+        Player karo = new Player(Token.CROSS, "Karo");
         Player juulia = new Player(Token.CROSS, "Juulia");
         Gameboard lauta = new Gameboard(3, 3);
         Game peli = new Game(lauta, karo, juulia);

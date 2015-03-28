@@ -7,13 +7,16 @@ public class Game {
     private boolean turn; //Kumman pelaajan  - true = pelaaja1 ja false = pelaaja2
     private Player player1;
     private Player player2;
-    
-    //PELAAJILLA EI SAA OLLA SAMAA MERKKIÄ - MITEN ESTETÄÄN?
-    //MITÄ TAPAHTUU, KUN WIN == TRUE?!
+   
+    //MITÄ TAPAHTUU, KUN WIN == TRUE?! (käyttöliittymässä)
     public Game(Gameboard gb, Player player1, Player player2) {
         this.board = gb;
         this.win = false;
         this.turn = true;
+        //Pelaajilla ei saa olla sama merkki
+        if(player1.getToken() == player2.getToken()) { 
+            player1.changeToken();
+        }
         this.player1 = player1;
         this.player2 = player2;
     }

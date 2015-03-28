@@ -19,10 +19,21 @@ public class GameTest {
     
     @Before
     public void setUp() {
-        player1 = new Player(Token.CIRCLE, "Ykkönen");
+        player1 = new Player(Token.CROSS, "Ykkönen");
         player2 = new Player(Token.CROSS, "Kakkonen");
         Gameboard gb = new Gameboard(4, 4);
         game = new Game(gb, player1, player2);
+    }
+    
+    @Test
+    public void playersHaveDifferentTokens() {
+        Token token = Token.EMPTY;
+        if(player1.getToken() != Token.CIRCLE) {
+            token = Token.CIRCLE;
+        } else {
+            token = Token.CROSS;
+        }
+        assertEquals(token, player2.getToken());
     }
     
     @Test
