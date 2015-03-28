@@ -6,7 +6,6 @@ public class Gameboard {
     private int width;
     private int height;
     
-    //MITÄ JOS ON EPÄSOPIVAT PARAMETRIT? MINIMILAUTA?!
     public Gameboard(int height, int width) {
         if((height != width) || (height < 3) || (width < 3)) {
             this.height = 3;
