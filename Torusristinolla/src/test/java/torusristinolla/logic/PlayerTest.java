@@ -7,16 +7,16 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class PelaajaTest {
+public class PlayerTest {
     
-    public PelaajaTest() {
+    public PlayerTest() {
     }
     
-    private Pelaaja pelaaja;
+    private Player pelaaja;
     
     @Before
     public void setUp() {
-        pelaaja = new Pelaaja(Token.CIRCLE, "Nimetön");
+        pelaaja = new Player(Token.CIRCLE, "Nimetön");
     }
     
     @Test

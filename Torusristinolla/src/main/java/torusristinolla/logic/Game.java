@@ -5,17 +5,17 @@ public class Game {
     private Gameboard board;
     private boolean win; //True, jos jompikumpi pelaaja voittaa
     private boolean turn; //Kumman pelaajan  - true = pelaaja1 ja false = pelaaja2
-    private Pelaaja pelaaja1;
-    private Pelaaja pelaaja2;
+    private Player player1;
+    private Player player2;
     
     //PELAAJILLA EI SAA OLLA SAMAA MERKKIÄ - MITEN ESTETÄÄN?
     //MITÄ TAPAHTUU, KUN WIN == TRUE?!
-    public Game(Gameboard gb, Pelaaja pelaaja1, Pelaaja pelaaja2) {
+    public Game(Gameboard gb, Player player1, Player player2) {
         this.board = gb;
         this.win = false;
         this.turn = true;
-        this.pelaaja1 = pelaaja1;
-        this.pelaaja2 = pelaaja2;
+        this.player1 = player1;
+        this.player2 = player2;
     }
     
     public Gameboard getBoard() {
@@ -26,9 +26,9 @@ public class Game {
         Token merkki = Token.EMPTY;
         
         if(turn) {
-            merkki = pelaaja1.getToken();
+            merkki = player1.getToken();
         } else {
-            merkki = pelaaja2.getToken();
+            merkki = player2.getToken();
         }
         
         if(playerIsOnBoard(x,y)) {

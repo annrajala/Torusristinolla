@@ -1,10 +1,10 @@
 package torusristinolla.logic;
 
-public class Pelaaja {
+public class Player {
     private Token token;
     private String nickname;
     
-    public Pelaaja(Token merkki, String name) {
+    public Player(Token merkki, String name) {
         this.token = merkki;
         this.nickname = name;
     }

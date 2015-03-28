@@ -14,15 +14,15 @@ public class GameTest {
     //LISÄÄ TAPAUKSIA MYÖS VAAKA- JA PYSTYSUORIIN
     
     private Game game;
-    private Pelaaja pelaaja1;
-    private Pelaaja pelaaja2; //Ei ole keinoa pelin kautta hakea pelaajia. ONGELMA?
-
+    private Player player1;
+    private Player player2;
+    
     @Before
     public void setUp() {
-        pelaaja1 = new Pelaaja(Token.CIRCLE, "Ykkönen");
-        pelaaja2 = new Pelaaja(Token.CROSS, "Kakkonen");
+        player1 = new Player(Token.CIRCLE, "Ykkönen");
+        player2 = new Player(Token.CROSS, "Kakkonen");
         Gameboard gb = new Gameboard(4, 4);
-        game = new Game(gb, pelaaja1, pelaaja2);
+        game = new Game(gb, player1, player2);
     }
     
     @Test

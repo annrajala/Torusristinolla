@@ -1,6 +1,6 @@
 import torusristinolla.logic.Game;
 import torusristinolla.logic.Gameboard;
-import torusristinolla.logic.Pelaaja;
+import torusristinolla.logic.Player;
 import torusristinolla.logic.Token;
 
 //VIIKKO 4: TEE KÄYTTÖLIITTYMÄ!!!
@@ -10,8 +10,8 @@ import torusristinolla.logic.Token;
 
 public class Main {
     public static void main( String[] args ) {
-        Pelaaja karo = new Pelaaja(Token.CIRCLE, "Karo");
-        Pelaaja juulia = new Pelaaja(Token.CROSS, "Juulia");
+        Player karo = new Player(Token.CIRCLE, "Karo");
+        Player juulia = new Player(Token.CROSS, "Juulia");
         Gameboard lauta = new Gameboard(3, 3);
         Game peli = new Game(lauta, karo, juulia);
         peli.printGameboardInCurrentState();
