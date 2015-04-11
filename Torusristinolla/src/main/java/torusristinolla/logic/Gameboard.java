@@ -1,24 +1,33 @@
 package torusristinolla.logic;
 
+/**
+ * Ruuduista koostuva neliön muotoinen pelilauta
+ */
 public class Gameboard {
     
     private Square[][] board;
     private int width;
-    private int height;
     
-    public Gameboard(int height, int width) {
-        if((height != width) || (height < 3) || (width < 3)) {
-            this.height = 3;
+    /**
+     * Pelilaudan konstruktori, joka huolehtii, että lauta on neliön muotoinen ja kooltaan vähintään 3x3
+     * @param width pelilaudan leveys
+     */
+    public Gameboard(int width) {
+        if(width < 3) {
             this.width = 3;
         } else {
-            this.height = height;
             this.width = width;
         }
-        this.board = createBoard(this.height, this.width);
+        this.board = createBoard(this.width, this.width);
     }
     
     
-    // Luodaan pelilauta taulukkona ruutuja.
+    /**
+     * Luodaan pelilauta taulukkona ruutuja.
+     * @param height laudan korkeus
+     * @param width laudan leveys
+     * @return luotu taulukko
+     */
     private Square[][] createBoard(int height, int width) {
         Square[][] ruudukko = new Square[height][width];
         
@@ -31,7 +40,6 @@ public class Gameboard {
         return ruudukko;
     }
     
-    //Huom. ei tarvita metodia getHeight, koska width == height
     public int getWidth() {
         return width;
     }
@@ -40,6 +48,12 @@ public class Gameboard {
         return board;
     }
     
+    /**
+     * Asettaa pelilaudalle merkin
+     * @param x merkin rivi
+     * @param y merkin sarake
+     * @param token merkki
+     */
     public void setToken(int x, int y, Token token) {
         board[x][y].setToken(token);
     }

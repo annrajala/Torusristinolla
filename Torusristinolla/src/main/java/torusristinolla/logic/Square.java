@@ -1,5 +1,9 @@
 package torusristinolla.logic;
 
+/**
+ * Yksi ruutu pelilaudalla
+ * @param token ruudussa oleva merkki
+ */
 public class Square {
     
     private Token token;

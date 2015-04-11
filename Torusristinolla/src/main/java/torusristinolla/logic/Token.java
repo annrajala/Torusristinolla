@@ -1,6 +1,8 @@
 package torusristinolla.logic;
 
-//Määritellään ruudun tila samalla tavalla, kuin ohjelmointikursseilla määriteltiin esim. korttipakan maat
+/**
+ * Kaikki mahdolliset merkit
+ */
 public enum Token {
     CROSS, CIRCLE, EMPTY;
 }

@@ -16,7 +16,7 @@ public class GameboardTest {
     
     @Before
     public void setUp() {
-        gb = new Gameboard(3,3);
+        gb = new Gameboard(3);
     }
     
     @Test
@@ -33,21 +33,10 @@ public class GameboardTest {
         assertEquals(Token.CIRCLE, gb.getToken(0,0));
     }
     
-    @Test
-    public void gameboardIs3x3SquareIfGivenUnmatchingParametres() {
-        gb = new Gameboard(3,5);
-        assertEquals(3, gb.getWidth());
-    }
     
     @Test
     public void gameboardIs3x3SquareIfGivenWidthSmallerThanThree() {
-        gb = new Gameboard(3,2);
-        assertEquals(3, gb.getWidth());
-    }
-    
-    @Test
-    public void gameboardIs3x3SquareIfGivenHeightSmallerThanThree() {
-        gb = new Gameboard(2,3);
+        gb = new Gameboard(2);
         assertEquals(3, gb.getWidth());
     }
     
