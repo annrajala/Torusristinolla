@@ -5,6 +5,10 @@ import java.awt.event.*;
 import javax.swing.*;
 import torusristinolla.logic.Game;
 
+/**
+ * Layout huolehtii ruudulla näkyvän graafikan toteuttamisesta.
+ */
+
 public class Layout extends JFrame{
     private Game game;
     private GridLayout grid;
