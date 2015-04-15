@@ -9,6 +9,9 @@ import torusristinolla.logic.Game;
 import torusristinolla.logic.Player;
 import torusristinolla.logic.Token;
 
+/**
+ * TextManager huolehtii voittajan tulostamisesta ruudulle
+ */
 
 public class TextManager implements ActionListener{
 
@@ -31,37 +34,25 @@ public class TextManager implements ActionListener{
     
     @Override
     public void actionPerformed(ActionEvent ae) {
-        if(game.isThereAWinner()) {
-            game.resetBoard();
-            
-            Player winner = new Player(Token.EMPTY, "anon");
-            
-            if(game.whosTurn()) {
-                winner = game.getPlayer2(); //Huom. pelaaja vaihtuu vuoron jälkeen. Siksi voittaja on edellisen vuoron pelaaja.
-            } else {
-                winner = game.getPlayer1();
-            }
-            
-            JOptionPane.showMessageDialog(frame,
-                    "Game over! Congratulations to " + (winner.getName()),
-                    "Winner found!",
-                    JOptionPane.PLAIN_MESSAGE);
-
-            return;
-        }
         
-        if(game.whosTurn()) {
-            this.player = game.getPlayer1();
-        } else {
-            this.player = game.getPlayer2();
-        }
+        this.player = game.whosTurn();
         
         System.out.println(x + " " + y);
         if (button.getText().isEmpty()) {
             button.setText(player.getTokenString());
         }
         game.playOneTurn(x, y);
+        
+        if(game.isThereAWinner()) {
+            game.resetBoard(); //Tää ei nyt oo ihan ok...
+            
+            JOptionPane.showMessageDialog(frame,
+                    "Game over! Congratulations to " + (game.whosTurn().getName()),
+                    "Winner found!",
+                    JOptionPane.PLAIN_MESSAGE);
 
+            return;
+        }
     }
 }
 

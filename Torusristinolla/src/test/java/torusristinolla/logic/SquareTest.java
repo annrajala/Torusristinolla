@@ -7,6 +7,10 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+/**
+ * Testataan luokan Square toimivuutta.
+ */
+
 public class SquareTest {
     
     public SquareTest() {

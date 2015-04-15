@@ -4,10 +4,9 @@ import torusristinolla.logic.Player;
 import torusristinolla.logic.Token;
 import torusristinolla.ui.UI;
 
-//VIIKKO 4: KÄYTTÖLIITTYMÄ!!!
 //VIIKKO 5: Mieti, miten saat parhaat tulokset totetutettua + parantele käyttöliittymää
 
-// BUGI!! Voittaja tulee näkyviin vasta, kun toinen pelaaja klikkaa ruutua + mites toi resettaus?
+//Mites toi resettaus?
 public class Main {
     public static void main( String[] args ) {
         Player karo = new Player(Token.CROSS, "Karo");

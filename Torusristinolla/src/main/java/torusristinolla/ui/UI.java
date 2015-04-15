@@ -11,6 +11,10 @@ import javax.swing.JOptionPane;
 import javax.swing.WindowConstants;
 import torusristinolla.logic.Game;
 
+/**
+ * Käyttöliittymä
+ */
+
 public class UI implements Runnable{
     
     private JFrame frame;

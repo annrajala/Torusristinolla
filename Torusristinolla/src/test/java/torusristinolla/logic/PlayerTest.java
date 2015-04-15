@@ -7,6 +7,10 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+/**
+ * Testataan luokan Player toimivuutta.
+ */
+
 public class PlayerTest {
     
     public PlayerTest() {

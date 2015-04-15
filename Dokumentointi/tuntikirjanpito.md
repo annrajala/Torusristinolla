@@ -53,3 +53,7 @@ TUNTIKIRJANPITO
 - ongelmien pohtimista
 - JavaDocin aloitus
 - bugien korjaus
+
+15.4. keskiviikko ? h
+- refaktorointi
+- bugin korjaaminen
