@@ -63,4 +63,26 @@ public class GameTest {
         game.switchTurn();
         assertEquals(player2, game.whosTurn());
     }
+    
+    @Test
+    public void afterResetGamePlayerInTurnIsPlayerOne() {
+        game.playOneTurn(1, 2);
+        game.playOneTurn(0, 0);
+        game.playOneTurn(1, 1);
+        game.playOneTurn(2, 2);
+        game.playOneTurn(1, 0);
+        game.resetGame();
+        assertEquals(player1, game.whosTurn());
+    }
+    
+    @Test
+    public void afterResetGameThereIsNoWinnerYet() {
+        game.playOneTurn(1, 2);
+        game.playOneTurn(0, 0);
+        game.playOneTurn(1, 1);
+        game.playOneTurn(2, 2);
+        game.playOneTurn(1, 0);
+        game.resetGame();
+        assertEquals(false, game.isThereAWinner());
+    }
 }

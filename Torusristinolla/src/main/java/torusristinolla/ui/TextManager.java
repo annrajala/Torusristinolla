@@ -1,5 +1,6 @@
 package torusristinolla.ui;
 
+import java.awt.Label;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -21,30 +22,33 @@ public class TextManager implements ActionListener{
     private int y;
     private JFrame frame;
     private Player player;
+    private Label playerInTurnField;
 
     
-    public TextManager(JButton jb, Game g, int x, int y, JFrame f) {
+    public TextManager(JButton jb, Game g, int x, int y, JFrame f, Label label) {
         this.button = jb;
         this.game = g;
         this.x = x;
         this.y = y;
         this.frame = f;
+        this.playerInTurnField = label;
         this.player = game.getPlayer1();
     }
     
     @Override
     public void actionPerformed(ActionEvent ae) {
+        game.switchTurn();
+        playerInTurnField.setText("Player: " + game.whosTurn().getName());
         
         this.player = game.whosTurn();
         
-        System.out.println(x + " " + y);
         if (button.getText().isEmpty()) {
             button.setText(player.getTokenString());
         }
+        
         game.playOneTurn(x, y);
         
         if(game.isThereAWinner()) {
-            game.resetBoard(); //Tää ei nyt oo ihan ok...
             
             JOptionPane.showMessageDialog(frame,
                     "Game over! Congratulations to " + (game.whosTurn().getName()),

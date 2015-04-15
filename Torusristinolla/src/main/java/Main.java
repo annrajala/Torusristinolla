@@ -4,9 +4,8 @@ import torusristinolla.logic.Player;
 import torusristinolla.logic.Token;
 import torusristinolla.ui.UI;
 
-//VIIKKO 5: Mieti, miten saat parhaat tulokset totetutettua + parantele käyttöliittymää
+//Mitä tapahtuu, jos voittajaa ei löydy?
 
-//Mites toi resettaus?
 public class Main {
     public static void main( String[] args ) {
         Player karo = new Player(Token.CROSS, "Karo");

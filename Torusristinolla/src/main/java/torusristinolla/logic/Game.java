@@ -74,8 +74,6 @@ public class Game {
         if(win) {
             return;
         }
-        
-        switchTurn();
     }
     
     /**
@@ -100,6 +98,12 @@ public class Game {
                 }
             }
         }
+    }
+    
+    public void resetGame() {
+        resetBoard();
+        this.win = false;
+        this.playerInTurn = this.player1;
     }
     
     public boolean isThereAWinner() {
