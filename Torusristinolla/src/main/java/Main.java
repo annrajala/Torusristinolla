@@ -15,6 +15,5 @@ public class Main {
         UI ui = new UI(peli);
         ui.run();
         
-        
     }
 }

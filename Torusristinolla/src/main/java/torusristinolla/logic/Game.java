@@ -66,7 +66,8 @@ public class Game {
         
         merkki = this.playerInTurn.getToken();
         
-        if(playerIsOnBoard(x,y)) {
+        //Pelaaja ei voi asettaa merkkiä ruutun, jos siinä on jo jokin muu merkki
+        if(playerIsOnBoard(x,y) && board.getToken(x, y) == Token.EMPTY) {
             board.setToken(x, y, merkki);
             win = this.checker.isPlayerWinning(x, y, merkki);
         }

@@ -58,3 +58,7 @@ TUNTIKIRJANPITO
 - refaktorointi
 - bugin korjaaminen
 - käyttöliittymän muokkaaminen
+
+16.4. torstai 2 h 
+- refaktorointi
+- ensimmäinen versio toimivasta resettauksesta valmis
