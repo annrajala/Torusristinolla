@@ -93,9 +93,7 @@ public class Game {
 
         for (int x = 0; x < board.getWidth(); x++) {
             for (int y = 0; y < board.getWidth(); y++) {
-                if (board.getToken(x, y) != Token.EMPTY ) {
                     board.setToken(x, y, Token.EMPTY);
-                }
             }
         }
     }

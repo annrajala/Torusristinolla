@@ -49,8 +49,7 @@ public class Layout extends JFrame{
         texts.add(vali);
         
         ActionListener resetGameListener = new ResetGameListener(this);
-        JMenuItem reset = new JMenuItem();
-        reset.setText("Reset game");
+        JMenuItem reset = new JMenuItem("Reset game");
         reset.addActionListener(resetGameListener);
         texts.add(reset);
         
@@ -64,12 +63,10 @@ public class Layout extends JFrame{
     
     public void reset() {
         game.resetGame();
-        this.removeAll();
-        this.revalidate();
+        this.getContentPane().removeAll();
         this.addComponentsToPane(this.getContentPane());
-        this.revalidate();
         this.repaint();
-        System.out.println("iik");
+        this.pack();
         setVisible(true);
     }
 }
