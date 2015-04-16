@@ -327,7 +327,7 @@ public class WinnerCheckerTest {
     @Test
     public void doesDiagonalWinningWorkWithLastTokenInTheTopLeftCornerSecondFromTheLeft() {
         game.playOneTurn(3, 3);
-        game.playOneTurn(0, 1);
+        game.playOneTurn(3, 1);
         game.playOneTurn(1, 0);
         game.playOneTurn(2, 1);
         game.playOneTurn(0, 1);

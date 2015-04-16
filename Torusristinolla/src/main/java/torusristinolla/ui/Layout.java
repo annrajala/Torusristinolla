@@ -13,6 +13,9 @@ public class Layout extends JFrame{
     private Game game;
     private GridLayout grid;
     private Label playerInTurn;
+    private Label score1;
+    private Label score2;
+    private Label lap;
     
     public Layout(String name, Game game) {
         super(name);
@@ -24,6 +27,7 @@ public class Layout extends JFrame{
     public void addComponentsToPane(final Container pane) {
         final JPanel components = new JPanel();
         JPanel texts = new JPanel();
+        JPanel situation = new JPanel();
         components.setLayout(grid);
         components.setPreferredSize(new Dimension(
                 150 * game.getBoard().getWidth(),
@@ -53,7 +57,20 @@ public class Layout extends JFrame{
         reset.addActionListener(resetGameListener);
         texts.add(reset);
         
+        this.score1 = new Label(game.getPlayer1().getName() + " score: " + game.getPlayer1Score());
+        Label vali2 = new Label("  ");
+        this.score2 = new Label(game.getPlayer2().getName() + " score: " + game.getPlayer2Score());
+        Label vali3 = new Label("  ");
+        this.lap = new Label("Lap: " + game.getLap());
+        
+        situation.add(score1);
+        situation.add(vali2);
+        situation.add(score2);
+        situation.add(vali3);
+        situation.add(lap);
+        
         pane.add(components, BorderLayout.NORTH);
+        pane.add(situation, BorderLayout.CENTER);
         pane.add(texts, BorderLayout.SOUTH);
     }
     

@@ -85,4 +85,32 @@ public class GameTest {
         game.resetGame();
         assertEquals(false, game.isThereAWinner());
     }
+    
+    @Test
+    public void inTheBeginningThereIsTheFirstLap() {
+        assertEquals(1, game.getLap());
+    }
+    
+    @Test
+    public void inTheBeginningPlayerScoreIsZero() {
+        assertEquals(0, game.getPlayer1Score());
+    }
+    
+    @Test
+    public void afterWinningPlayersScoreIncreases() {
+        game.playOneTurn(1, 2);
+        game.playOneTurn(0, 0);
+        game.playOneTurn(1, 0);
+        game.playOneTurn(2, 2);
+        game.playOneTurn(1, 1);
+        assertEquals(1, game.getPlayer1Score());
+    }
+    
+    @Test
+    public void afterResetLapChanges() {
+        game.playOneTurn(1, 1);
+        game.playOneTurn(0, 0);
+        game.resetGame();
+        assertEquals(2, game.getLap());
+    }
 }
