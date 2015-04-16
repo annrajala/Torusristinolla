@@ -1,7 +1,7 @@
 package torusristinolla.ui;
 
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.ActionListener;
 import javax.swing.*;
 import torusristinolla.logic.Game;
 
@@ -45,12 +45,31 @@ public class Layout extends JFrame{
         
         texts.add(playerInTurn);
         
+        Label vali = new Label("          ");
+        texts.add(vali);
+        
+        ActionListener resetGameListener = new ResetGameListener(this);
+        JMenuItem reset = new JMenuItem();
+        reset.setText("Reset game");
+        reset.addActionListener(resetGameListener);
+        texts.add(reset);
+        
         pane.add(components, BorderLayout.NORTH);
-        pane.add(new JSeparator(), BorderLayout.CENTER);
         pane.add(texts, BorderLayout.SOUTH);
     }
     
     public Label getPlayerInTurnField() {
         return this.playerInTurn;
+    }
+    
+    public void reset() {
+        game.resetGame();
+        this.removeAll();
+        this.revalidate();
+        this.addComponentsToPane(this.getContentPane());
+        this.revalidate();
+        this.repaint();
+        System.out.println("iik");
+        setVisible(true);
     }
 }

@@ -14,5 +14,7 @@ public class Main {
         Game peli = new Game(lauta, karo, juulia);
         UI ui = new UI(peli);
         ui.run();
+        
+        
     }
 }

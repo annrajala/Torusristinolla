@@ -8,10 +8,9 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import torusristinolla.logic.Game;
 import torusristinolla.logic.Player;
-import torusristinolla.logic.Token;
 
 /**
- * TextManager huolehtii voittajan tulostamisesta ruudulle
+ * TextManager huolehtii pelimerkin, vuorossa olevan pelaajan ja voittajan tulostamisesta ruudulle
  */
 
 public class TextManager implements ActionListener{
@@ -20,12 +19,12 @@ public class TextManager implements ActionListener{
     private final Game game;
     private int x;
     private int y;
-    private JFrame frame;
+    private Layout frame;
     private Player player;
     private Label playerInTurnField;
 
     
-    public TextManager(JButton jb, Game g, int x, int y, JFrame f, Label label) {
+    public TextManager(JButton jb, Game g, int x, int y, Layout f, Label label) {
         this.button = jb;
         this.game = g;
         this.x = x;
@@ -54,7 +53,7 @@ public class TextManager implements ActionListener{
                     "Game over! Congratulations to " + (game.whosTurn().getName()),
                     "Winner found!",
                     JOptionPane.PLAIN_MESSAGE);
-
+            
             return;
         }
     }

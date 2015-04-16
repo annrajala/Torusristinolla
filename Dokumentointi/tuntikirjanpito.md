@@ -54,6 +54,7 @@ TUNTIKIRJANPITO
 - JavaDocin aloitus
 - bugien korjaus
 
-15.4. keskiviikko ? h
+15.4. keskiviikko 8 h
 - refaktorointi
 - bugin korjaaminen
+- käyttöliittymän muokkaaminen

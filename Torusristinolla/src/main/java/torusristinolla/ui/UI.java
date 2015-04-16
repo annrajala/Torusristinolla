@@ -1,14 +1,5 @@
 package torusristinolla.ui;
 
-import java.awt.Color;
-import java.awt.Container;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.GridLayout;
-import java.awt.Label;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JTextArea;
 import javax.swing.WindowConstants;
 import torusristinolla.logic.Game;
 
@@ -36,5 +27,10 @@ public class UI implements Runnable {
         frame.pack();
         frame.setVisible(true);
     }
+    
+    public void setGame(Game game) {
+        this.game = game;
+    }
+    
 }
 
