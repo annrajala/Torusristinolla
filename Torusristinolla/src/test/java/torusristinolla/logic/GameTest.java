@@ -8,10 +8,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- * Testataan luokan Game toimivuutta.
- */
-
 public class GameTest {
     
     private Game game;

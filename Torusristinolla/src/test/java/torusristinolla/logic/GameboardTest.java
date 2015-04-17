@@ -7,9 +7,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- * Tarkistetaan luokan Gameboard toimivuutta.
- */
 public class GameboardTest {
     
     public GameboardTest() {

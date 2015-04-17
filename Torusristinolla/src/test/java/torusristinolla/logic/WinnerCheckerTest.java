@@ -7,9 +7,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- * Testataan luokan WinnerChecker toimivuutta.
- */
 public class WinnerCheckerTest {
     
     private Game game;
