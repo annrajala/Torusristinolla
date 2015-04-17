@@ -30,8 +30,8 @@ public class Layout extends JFrame{
         JPanel situation = new JPanel();
         components.setLayout(grid);
         components.setPreferredSize(new Dimension(
-                150 * game.getBoard().getWidth(),
-                150 * game.getBoard().getWidth()));
+                100 * game.getBoard().getWidth(),
+                100 * game.getBoard().getWidth()));
         
         this.playerInTurn = new Label("Player: " + game.getPlayer1().getName());
         

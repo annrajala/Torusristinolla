@@ -59,6 +59,8 @@ TUNTIKIRJANPITO
 - bugin korjaaminen
 - käyttöliittymän muokkaaminen
 
-16.4. torstai 3 h 
+16.4. torstai 5 h 
 - refaktorointi
 - ensimmäinen versio toimivasta resettauksesta valmis
+- kierros ja score
+- testausta

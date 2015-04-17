@@ -4,6 +4,7 @@ package torusristinolla.logic;
  * WinnerChecker tarkistaa, onko pelissä voittosuoraa
  */
 
+//LOGIIKASSA BUGEJA!!!!!!!!!!!
 public class WinnerChecker {
     
     private Gameboard board;
