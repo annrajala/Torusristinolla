@@ -92,7 +92,7 @@ public class Layout extends JFrame{
     }
     
     /**
-     * Resettaa pelilaudan ja pelin. 
+     * Resettaa pelilaudan ja pelin. Piirtää komponentit uudelleen.
      */
     public void reset() {
         game.resetGame();
