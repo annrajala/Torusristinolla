@@ -4,13 +4,11 @@ import torusristinolla.logic.Player;
 import torusristinolla.logic.Token;
 import torusristinolla.ui.UI;
 
-//Mitä tapahtuu, jos voittajaa ei löydy?
-
 public class Main {
     public static void main( String[] args ) {
-        Player karo = new Player(Token.CROSS, "Karo");
-        Player juulia = new Player(Token.CIRCLE, "Juulia");
-        Gameboard lauta = new Gameboard(4);
+        Player karo = new Player(Token.CROSS, "Janne");
+        Player juulia = new Player(Token.CIRCLE, "Ansku");
+        Gameboard lauta = new Gameboard(3);
         Game peli = new Game(lauta, karo, juulia);
         UI ui = new UI(peli);
         ui.run();

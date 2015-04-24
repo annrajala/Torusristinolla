@@ -17,6 +17,11 @@ public class Layout extends JFrame{
     private Label score2;
     private Label lap;
     
+    /**
+     * Luodaan frame.
+     * @param name pelin nimi
+     * @param game käytettävä Game-olio
+     */
     public Layout(String name, Game game) {
         super(name);
         setResizable(false);
@@ -24,6 +29,10 @@ public class Layout extends JFrame{
         this.grid = new GridLayout(this.game.getBoard().getWidth(), this.game.getBoard().getWidth());
     }
     
+    /**
+     * Lisätään containeriin ruudulle piirrettävän komponentit.
+     * @param pane Tänne lisätään komponentit
+     */
     public void addComponentsToPane(final Container pane) {
         final JPanel components = new JPanel();
         JPanel texts = new JPanel();
@@ -33,7 +42,7 @@ public class Layout extends JFrame{
                 100 * game.getBoard().getWidth(),
                 100 * game.getBoard().getWidth()));
         
-        this.playerInTurn = new Label("Player: " + game.getPlayer1().getName());
+        this.playerInTurn = new Label("Player: " + game.getPlayer2().getName());
         
         for (int y = 0; y < game.getBoard().getWidth(); y++) {
             for (int x = 0; x < game.getBoard().getWidth(); x++) {
@@ -58,9 +67,9 @@ public class Layout extends JFrame{
         texts.add(reset);
         
         this.score1 = new Label(game.getPlayer1().getName() + " score: " + game.getPlayer1Score());
-        Label vali2 = new Label("  ");
+        Label vali2 = new Label("   ");
         this.score2 = new Label(game.getPlayer2().getName() + " score: " + game.getPlayer2Score());
-        Label vali3 = new Label("  ");
+        Label vali3 = new Label("   ");
         this.lap = new Label("Lap: " + game.getLap());
         
         situation.add(score1);
@@ -74,10 +83,17 @@ public class Layout extends JFrame{
         pane.add(texts, BorderLayout.SOUTH);
     }
     
+    /**
+     * Palauttaa kentän, johon vuorossa oleva pelaaja voidaan kirjoittaa vuoron vaihtuessa.
+     * @return kenttä, johon vuorossa oleva pelaaja kirjoitetaan
+     */
     public Label getPlayerInTurnField() {
         return this.playerInTurn;
     }
     
+    /**
+     * Resettaa pelilaudan ja pelin. 
+     */
     public void reset() {
         game.resetGame();
         this.getContentPane().removeAll();

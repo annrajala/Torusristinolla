@@ -12,6 +12,10 @@ public class UI implements Runnable {
     private Layout frame;
     private Game game;
 
+    /**
+     * Luodaan käyttöliittymä.
+     * @param game käyttöliittymään liitettävä Game-olio
+     */
     public UI(Game game) {
         this.game = game;
     }

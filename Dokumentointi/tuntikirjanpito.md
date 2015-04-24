@@ -64,3 +64,15 @@ TUNTIKIRJANPITO
 - ensimmäinen versio toimivasta resettauksesta valmis
 - kierros ja score
 - testausta
+
+20.4. maanantai 10h
+- logiikan korjaus ja kaunistus
+- käyttöliittymän bugin korjaus
+
+21.4. tiistai 10h
+- logiikan korjauksen jatkoa
+- logiikan testauksen korjausta ja lisäämistä
+
+24.4. perjantai 2h
+- logiikan testauksen jatkoa
+- sekvenssikaavio

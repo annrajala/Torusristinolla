@@ -10,7 +10,6 @@ public class ResetGameListener implements ActionListener {
     
     private Layout frame;
     
-    
     public ResetGameListener(Layout frame) {
         super();
         this.frame = frame;

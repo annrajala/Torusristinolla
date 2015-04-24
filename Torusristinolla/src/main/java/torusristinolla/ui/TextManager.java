@@ -36,10 +36,13 @@ public class TextManager implements ActionListener{
     
     @Override
     public void actionPerformed(ActionEvent ae) {
+        Player previousPlayer = game.whosTurn();
+        
         game.switchTurn();
-        playerInTurnField.setText("Player: " + game.whosTurn().getName());
         
         this.player = game.whosTurn();
+        
+        playerInTurnField.setText("Player: " + previousPlayer.getName());
         
         if (button.getText().isEmpty()) {
             button.setText(player.getTokenString());
@@ -50,7 +53,7 @@ public class TextManager implements ActionListener{
         if(game.isThereAWinner()) {
             
             JOptionPane.showMessageDialog(frame,
-                    "Game over! Congratulations to " + (game.whosTurn().getName()),
+                    "Game over! Congratulations to " + (this.player.getName()),
                     "Winner found!",
                     JOptionPane.PLAIN_MESSAGE);
             
