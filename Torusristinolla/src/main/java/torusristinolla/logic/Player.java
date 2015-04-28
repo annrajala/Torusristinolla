@@ -27,7 +27,7 @@ public class Player {
     }
     
     /**
-     * @return pelaajan merkkiä vastaava String-merkki
+     * @return pelaajan merkkiä vastaava String
      */
     public String getTokenString() {
         if(this.token == Token.CIRCLE) {

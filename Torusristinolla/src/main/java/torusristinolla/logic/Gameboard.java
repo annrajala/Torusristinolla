@@ -58,6 +58,12 @@ public class Gameboard {
         board[x][y].setToken(token);
     }
     
+    /**
+     * Palauttaa halutun merkin laudalta
+     * @param x merkin rivi
+     * @param y merkin sarake
+     * @return halutussa ruudussa oleva merkki
+     */
     public Token getToken(int x, int y) {
         return board[x][y].getToken();
     }

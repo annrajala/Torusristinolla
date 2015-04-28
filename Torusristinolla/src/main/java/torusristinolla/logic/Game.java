@@ -3,7 +3,7 @@ package torusristinolla.logic;
 import java.util.HashMap;
 
 /**
- * Luokka huolehtii vuoron pelaamisista ja voiton tarkistuksista. Voittoon riittää 3 merkin voittosuora.
+ * Luokka huolehtii vuoron pelaamisista. Voittoon riittää 3 merkin voittosuora.
  * 
  * @param win true, jos pelissä on voittaja
  * @param playerInTurn vuorossa oleva pelaaja
@@ -19,7 +19,7 @@ public class Game {
     private Player player2;
     private WinnerChecker checker;
     private HashMap<Player, Integer> wins;
-    private Integer lap;
+    private Integer round;
     
     /**
      * Pelin konstruktori
@@ -27,6 +27,9 @@ public class Game {
      * @param gb käytettävä pelilauta
      * @param player1 ensimmäinen pelaaja
      * @param player2 toinen pelaaja
+     * 
+     * Konstruktori pitää huolen, ettei pelaajilla ole samaa merkkiä.
+     * Konstruktorissa luodaan WinnerChecker, asetetaan vuorossa ensin oleva pelaaja ja luodaan voitoista kirjaa pitävä HashMap, jonne kummallekin pelaajalle laitetaan aluksi voittojen lukumääräksi nolla.
      */
     public Game(Gameboard gb, Player player1, Player player2) {
         this.board = gb;
@@ -42,7 +45,7 @@ public class Game {
         this.wins = new HashMap<Player, Integer>();
         this.wins.put(player1, 0);
         this.wins.put(player2, 0);
-        this.lap = 1;
+        this.round = 1;
     }
     
     public Gameboard getBoard() {
@@ -112,7 +115,7 @@ public class Game {
         resetBoard();
         this.win = false;
         this.playerInTurn = this.player1;
-        this.lap++;
+        this.round++;
     }
     
     public boolean isThereAWinner() {
@@ -151,7 +154,7 @@ public class Game {
         return this.wins.get(player2);
     }
     
-    public int getLap() {
-        return this.lap;
+    public int getRound() {
+        return this.round;
     }
 }

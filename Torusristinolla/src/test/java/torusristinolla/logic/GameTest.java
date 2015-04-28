@@ -84,7 +84,7 @@ public class GameTest {
     
     @Test
     public void inTheBeginningThereIsTheFirstLap() {
-        assertEquals(1, game.getLap());
+        assertEquals(1, game.getRound());
     }
     
     @Test
@@ -107,6 +107,6 @@ public class GameTest {
         game.playOneTurn(1, 1);
         game.playOneTurn(0, 0);
         game.resetGame();
-        assertEquals(2, game.getLap());
+        assertEquals(2, game.getRound());
     }
 }

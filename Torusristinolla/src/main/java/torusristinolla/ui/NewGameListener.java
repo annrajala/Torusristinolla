@@ -4,13 +4,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Tämä luokka on reset-painikkeen kuuntelua varten
+ * Tämä luokka on "New game"-painikkeen kuuntelua varten
  */
-public class ResetGameListener implements ActionListener {
+public class NewGameListener implements ActionListener {
     
     private Layout frame;
     
-    public ResetGameListener(Layout frame) {
+    public NewGameListener(Layout frame) {
         super();
         this.frame = frame;
     }

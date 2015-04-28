@@ -65,14 +65,18 @@ TUNTIKIRJANPITO
 - kierros ja score
 - testausta
 
-20.4. maanantai 10h
+20.4. maanantai 10 h
 - logiikan korjaus ja kaunistus
 - käyttöliittymän bugin korjaus
 
-21.4. tiistai 10h
+21.4. tiistai 10 h
 - logiikan korjauksen jatkoa
 - logiikan testauksen korjausta ja lisäämistä
 
-24.4. perjantai 2h
+24.4. perjantai 2 h
 - logiikan testauksen jatkoa
 - sekvenssikaavio
+
+28.4. tiistai ? h
+- työn viimeistelyä
+- dokumentoinnin täydentämistä

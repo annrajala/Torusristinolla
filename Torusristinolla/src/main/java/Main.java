@@ -6,10 +6,10 @@ import torusristinolla.ui.UI;
 
 public class Main {
     public static void main( String[] args ) {
-        Player karo = new Player(Token.CROSS, "Janne");
-        Player juulia = new Player(Token.CIRCLE, "Ansku");
+        Player p1 = new Player(Token.CROSS, "Player 1");
+        Player p2 = new Player(Token.CIRCLE, "Player 2");
         Gameboard lauta = new Gameboard(3);
-        Game peli = new Game(lauta, karo, juulia);
+        Game peli = new Game(lauta, p2, p1);
         UI ui = new UI(peli);
         ui.run();
         

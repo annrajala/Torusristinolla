@@ -15,7 +15,7 @@ public class Layout extends JFrame{
     private Label playerInTurn;
     private Label score1;
     private Label score2;
-    private Label lap;
+    private Label round;
     
     /**
      * Luodaan frame.
@@ -61,8 +61,8 @@ public class Layout extends JFrame{
         Label vali = new Label("          ");
         texts.add(vali);
         
-        ActionListener resetGameListener = new ResetGameListener(this);
-        JMenuItem reset = new JMenuItem("Reset game");
+        ActionListener resetGameListener = new NewGameListener(this);
+        JMenuItem reset = new JMenuItem("New game");
         reset.addActionListener(resetGameListener);
         texts.add(reset);
         
@@ -70,13 +70,13 @@ public class Layout extends JFrame{
         Label vali2 = new Label("   ");
         this.score2 = new Label(game.getPlayer2().getName() + " score: " + game.getPlayer2Score());
         Label vali3 = new Label("   ");
-        this.lap = new Label("Lap: " + game.getLap());
+        this.round = new Label("Round: " + game.getRound());
         
         situation.add(score1);
         situation.add(vali2);
         situation.add(score2);
         situation.add(vali3);
-        situation.add(lap);
+        situation.add(round);
         
         pane.add(components, BorderLayout.NORTH);
         pane.add(situation, BorderLayout.CENTER);

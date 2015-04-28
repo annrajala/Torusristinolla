@@ -8,6 +8,9 @@ public class Square {
     
     private Token token;
     
+    /**
+     * Konstruktori asettaa ruudun merkin ensin tyhjäksi.
+     */
     public Square() {
         this.token = Token.EMPTY;
     }
