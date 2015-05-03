@@ -142,7 +142,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''> * Luokka huolehtii vuoron pelaamisista ja voiton tarkistuksista. Voittoon riitt&#228;&#228; 3 merkin voittosuora.</span></pre></td></tr>
+<td class=''><pre><span  class=''> * Luokka huolehtii vuoron pelaamisista. Voittoon riitt&#228;&#228; 3 merkin voittosuora.</span></pre></td></tr>
 
 
 <tr>
@@ -156,7 +156,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''> * </span></pre></td></tr>
+<td class=''><pre><span  class=''> */</span></pre></td></tr>
 
 
 <tr>
@@ -170,7 +170,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''> * @param win true, jos peliss&#228; on voittaja</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
@@ -184,7 +184,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''> * @param playerInTurn vuorossa oleva pelaaja</span></pre></td></tr>
+<td class=''><pre><span  class=''>public class Game {</span></pre></td></tr>
 
 
 <tr>
@@ -198,7 +198,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''> * </span></pre></td></tr>
+<td class=''><pre><span  class=''>    </span></pre></td></tr>
 
 
 <tr>
@@ -212,7 +212,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''> */</span></pre></td></tr>
+<td class=''><pre><span  class=''>    private Gameboard board;</span></pre></td></tr>
 
 
 <tr>
@@ -226,7 +226,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class=''><pre><span  class=''>    private boolean win;</span></pre></td></tr>
 
 
 <tr>
@@ -240,7 +240,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>public class Game {</span></pre></td></tr>
+<td class=''><pre><span  class=''>    private Player playerInTurn;</span></pre></td></tr>
 
 
 <tr>
@@ -254,7 +254,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    </span></pre></td></tr>
+<td class=''><pre><span  class=''>    private Player player1;</span></pre></td></tr>
 
 
 <tr>
@@ -268,7 +268,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    private Gameboard board;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    private Player player2;</span></pre></td></tr>
 
 
 <tr>
@@ -282,7 +282,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    private boolean win;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    private WinnerChecker checker;</span></pre></td></tr>
 
 
 <tr>
@@ -296,7 +296,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    private Player playerInTurn;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    private HashMap&#60;Player, Integer&#62; wins;</span></pre></td></tr>
 
 
 <tr>
@@ -310,7 +310,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    private Player player1;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    private Integer round;</span></pre></td></tr>
 
 
 <tr>
@@ -324,7 +324,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    private Player player2;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    </span></pre></td></tr>
 
 
 <tr>
@@ -338,7 +338,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    private WinnerChecker checker;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
 
 
 <tr>
@@ -352,7 +352,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    private HashMap&#60;Player, Integer&#62; wins;</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * Pelin konstruktori</span></pre></td></tr>
 
 
 <tr>
@@ -366,7 +366,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    private Integer lap;</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * </span></pre></td></tr>
 
 
 <tr>
@@ -380,7 +380,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    </span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @param gb k&#228;ytett&#228;v&#228; pelilauta</span></pre></td></tr>
 
 
 <tr>
@@ -394,7 +394,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @param player1 ensimm&#228;inen pelaaja</span></pre></td></tr>
 
 
 <tr>
@@ -408,7 +408,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * Pelin konstruktori</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @param player2 toinen pelaaja</span></pre></td></tr>
 
 
 <tr>
@@ -436,7 +436,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * @param gb k&#228;ytett&#228;v&#228; pelilauta</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * Konstruktori pit&#228;&#228; huolen, ettei pelaajilla ole samaa merkki&#228;.</span></pre></td></tr>
 
 
 <tr>
@@ -450,7 +450,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * @param player1 ensimm&#228;inen pelaaja</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * Konstruktorissa luodaan WinnerChecker, asetetaan vuorossa ensin oleva pelaaja ja luodaan voitoista kirjaa pit&#228;v&#228; HashMap, jonne kummallekin pelaajalle laitetaan aluksi voittojen lukum&#228;&#228;r&#228;ksi nolla.</span></pre></td></tr>
 
 
 <tr>
@@ -464,11 +464,11 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * @param player2 toinen pelaaja</span></pre></td></tr>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_30'/>
 30
 </td>
@@ -478,7 +478,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    public Game(Gameboard gb, Player player1, Player player2) {</span></pre></td></tr>
 
 
 <tr>
@@ -492,7 +492,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    public Game(Gameboard gb, Player player1, Player player2) {</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.board = gb;</span></pre></td></tr>
 
 
 <tr>
@@ -506,7 +506,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.board = gb;</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.win = false;</span></pre></td></tr>
 
 
 <tr>
@@ -520,11 +520,11 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.win = false;</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.checker = new WinnerChecker(this.board);</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_34'/>
 34
 </td>
@@ -534,21 +534,23 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.checker = new WinnerChecker(this.board);</span></pre></td></tr>
+<td class=''><pre><span  class=''>        //Pelaajilla ei saa olla sama merkki</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_35'/>
 35
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_35'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_35'>1</a>
 <span>
+1. <init> : negated conditional &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''>        //Pelaajilla ei saa olla sama merkki</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        if(player1.getToken() == player2.getToken()) { </span></pre></td></tr>
 
 
 <tr>
@@ -560,22 +562,6 @@ padding-left: 5px;
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_36'>1</a>
 <span>
-1. <init> : negated conditional &rarr; KILLED<br/>
-
-</span>
-</td>
-<td class='covered'><pre><span  class='killed'>        if(player1.getToken() == player2.getToken()) { </span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_37'/>
-37
-</td>
-<td class='killed'>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_37'>1</a>
-<span>
 1. <init> : removed call to torusristinolla/logic/Player::changeToken &rarr; KILLED<br/>
 
 </span>
@@ -585,6 +571,20 @@ padding-left: 5px;
 
 <tr>
 <td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_37'/>
+37
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_37'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_38'/>
 38
 </td>
@@ -594,7 +594,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.player1 = player1;</span></pre></td></tr>
 
 
 <tr>
@@ -608,7 +608,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.player1 = player1;</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.player2 = player2;</span></pre></td></tr>
 
 
 <tr>
@@ -622,7 +622,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.player2 = player2;</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.playerInTurn = this.player1;</span></pre></td></tr>
 
 
 <tr>
@@ -636,7 +636,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.playerInTurn = this.player1;</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.wins = new HashMap&#60;Player, Integer&#62;();</span></pre></td></tr>
 
 
 <tr>
@@ -650,7 +650,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.wins = new HashMap&#60;Player, Integer&#62;();</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.wins.put(player1, 0);</span></pre></td></tr>
 
 
 <tr>
@@ -664,7 +664,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.wins.put(player1, 0);</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.wins.put(player2, 0);</span></pre></td></tr>
 
 
 <tr>
@@ -678,7 +678,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.wins.put(player2, 0);</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.round = 1;</span></pre></td></tr>
 
 
 <tr>
@@ -692,11 +692,11 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.lap = 1;</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_46'/>
 46
 </td>
@@ -706,7 +706,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    </span></pre></td></tr>
 
 
 <tr>
@@ -720,37 +720,37 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    </span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_48'/>
-48
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_48'></a>
-<span>
-</span>
-</td>
 <td class=''><pre><span  class=''>    public Gameboard getBoard() {</span></pre></td></tr>
 
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_49'/>
-49
+<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_48'/>
+48
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_49'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_48'>1</a>
 <span>
 1. getBoard : mutated return of Object value for torusristinolla/logic/Game::getBoard to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
 
 </span>
 </td>
 <td class='covered'><pre><span  class='killed'>        return board;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_49'/>
+49
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_49'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -764,7 +764,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    </span></pre></td></tr>
 
 
 <tr>
@@ -778,7 +778,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    </span></pre></td></tr>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
 
 
 <tr>
@@ -792,7 +792,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @return vuorossa oleva pelaaja</span></pre></td></tr>
 
 
 <tr>
@@ -806,7 +806,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * @return vuorossa oleva pelaaja</span></pre></td></tr>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
 
 
 <tr>
@@ -820,37 +820,37 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     */</span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_55'/>
-55
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_55'></a>
-<span>
-</span>
-</td>
 <td class=''><pre><span  class=''>    public Player whosTurn() {</span></pre></td></tr>
 
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_56'/>
-56
+<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_55'/>
+55
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_56'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_55'>1</a>
 <span>
 1. whosTurn : mutated return of Object value for torusristinolla/logic/Game::whosTurn to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
 
 </span>
 </td>
 <td class='covered'><pre><span  class='killed'>        return this.playerInTurn;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_56'/>
+56
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_56'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -864,7 +864,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    </span></pre></td></tr>
 
 
 <tr>
@@ -878,37 +878,37 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    </span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_59'/>
-59
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_59'></a>
-<span>
-</span>
-</td>
 <td class=''><pre><span  class=''>    public Player getPlayer1() {</span></pre></td></tr>
 
 
 <tr>
 <td class='uncovered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_60'/>
-60
+<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_59'/>
+59
 </td>
 <td class='survived'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_60'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_59'>1</a>
 <span>
 1. getPlayer1 : mutated return of Object value for torusristinolla/logic/Game::getPlayer1 to ( if (x != null) null else throw new RuntimeException ) &rarr; NO_COVERAGE<br/>
 
 </span>
 </td>
 <td class='uncovered'><pre><span  class='survived'>        return this.player1;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_60'/>
+60
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_60'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -922,7 +922,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    </span></pre></td></tr>
 
 
 <tr>
@@ -936,37 +936,37 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    </span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_63'/>
-63
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_63'></a>
-<span>
-</span>
-</td>
 <td class=''><pre><span  class=''>    public Player getPlayer2() {</span></pre></td></tr>
 
 
 <tr>
 <td class='uncovered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_64'/>
-64
+<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_63'/>
+63
 </td>
 <td class='survived'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_64'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_63'>1</a>
 <span>
 1. getPlayer2 : mutated return of Object value for torusristinolla/logic/Game::getPlayer2 to ( if (x != null) null else throw new RuntimeException ) &rarr; NO_COVERAGE<br/>
 
 </span>
 </td>
 <td class='uncovered'><pre><span  class='survived'>        return this.player2;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_64'/>
+64
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_64'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -980,7 +980,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    </span></pre></td></tr>
 
 
 <tr>
@@ -994,7 +994,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    </span></pre></td></tr>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
 
 
 <tr>
@@ -1008,7 +1008,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * Suorittaa yhden vuoron pelaamisen eli asettaa vuorossa olevan pelaajan merkin laudalle ja tarkistaa, syntyyk&#246; t&#228;st&#228; voittosuora</span></pre></td></tr>
 
 
 <tr>
@@ -1022,7 +1022,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * Suorittaa yhden vuoron pelaamisen eli asettaa vuorossa olevan pelaajan merkin laudalle ja tarkistaa, syntyyk&#246; t&#228;st&#228; voittosuora</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @param x asetettavan merkin rivi</span></pre></td></tr>
 
 
 <tr>
@@ -1036,7 +1036,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * @param x asetettavan merkin rivi</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @param y asetettavan merkin sarake</span></pre></td></tr>
 
 
 <tr>
@@ -1050,7 +1050,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * @param y asetettavan merkin sarake</span></pre></td></tr>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
 
 
 <tr>
@@ -1064,11 +1064,11 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public void playOneTurn(int x, int y) {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_72'/>
 72
 </td>
@@ -1078,11 +1078,11 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public void playOneTurn(int x, int y) {</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        Token merkki = Token.EMPTY;</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_73'/>
 73
 </td>
@@ -1092,11 +1092,11 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        Token merkki = Token.EMPTY;</span></pre></td></tr>
+<td class=''><pre><span  class=''>        </span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_74'/>
 74
 </td>
@@ -1106,11 +1106,11 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>        </span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        merkki = this.playerInTurn.getToken();</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_75'/>
 75
 </td>
@@ -1120,7 +1120,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        merkki = this.playerInTurn.getToken();</span></pre></td></tr>
+<td class=''><pre><span  class=''>        </span></pre></td></tr>
 
 
 <tr>
@@ -1134,31 +1134,17 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>        </span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_77'/>
-77
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_77'></a>
-<span>
-</span>
-</td>
 <td class=''><pre><span  class=''>        //Pelaaja ei voi asettaa merkki&#228; ruutun, jos siin&#228; on jo jokin muu merkki</span></pre></td></tr>
 
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_78'/>
-78
+<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_77'/>
+77
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_78'>2</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_77'>2</a>
 <span>
 1. playOneTurn : negated conditional &rarr; KILLED<br/>
 2. playOneTurn : negated conditional &rarr; KILLED<br/>
@@ -1170,12 +1156,12 @@ padding-left: 5px;
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_79'/>
-79
+<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_78'/>
+78
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_79'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_78'>1</a>
 <span>
 1. playOneTurn : removed call to torusristinolla/logic/Gameboard::setToken &rarr; KILLED<br/>
 
@@ -1186,6 +1172,20 @@ padding-left: 5px;
 
 <tr>
 <td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_79'/>
+79
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_79'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            win = this.checker.isPlayerWinning(x, y, merkki);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_80'/>
 80
 </td>
@@ -1195,7 +1195,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>            win = this.checker.isPlayerWinning(x, y, merkki);</span></pre></td></tr>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
 
 
 <tr>
@@ -1209,21 +1209,23 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+<td class=''><pre><span  class=''>        </span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_82'/>
 82
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_82'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_82'>1</a>
 <span>
+1. playOneTurn : negated conditional &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''>        </span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        if(win) {</span></pre></td></tr>
 
 
 <tr>
@@ -1235,22 +1237,6 @@ padding-left: 5px;
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_83'>1</a>
 <span>
-1. playOneTurn : negated conditional &rarr; KILLED<br/>
-
-</span>
-</td>
-<td class='covered'><pre><span  class='killed'>        if(win) {</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_84'/>
-84
-</td>
-<td class='killed'>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_84'>1</a>
-<span>
 1. playOneTurn : Replaced integer addition with subtraction &rarr; KILLED<br/>
 
 </span>
@@ -1260,6 +1246,20 @@ padding-left: 5px;
 
 <tr>
 <td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_84'/>
+84
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_84'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            return;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_85'/>
 85
 </td>
@@ -1269,11 +1269,11 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>            return;</span></pre></td></tr>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_86'/>
 86
 </td>
@@ -1283,11 +1283,11 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_87'/>
 87
 </td>
@@ -1297,7 +1297,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    </span></pre></td></tr>
 
 
 <tr>
@@ -1311,7 +1311,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    </span></pre></td></tr>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
 
 
 <tr>
@@ -1325,7 +1325,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * Tarkistaa, onko pelaajan merkki laudalla</span></pre></td></tr>
 
 
 <tr>
@@ -1339,7 +1339,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * Tarkistaa, onko pelaajan merkki laudalla</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @param x merkin rivi</span></pre></td></tr>
 
 
 <tr>
@@ -1353,7 +1353,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * @param x merkin rivi</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @param y merkin sarake</span></pre></td></tr>
 
 
 <tr>
@@ -1367,7 +1367,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * @param y merkin sarake</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * @return true, jos merkki on laudalla</span></pre></td></tr>
 
 
 <tr>
@@ -1381,7 +1381,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * @return true, jos merkki on laudalla</span></pre></td></tr>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
 
 
 <tr>
@@ -1395,31 +1395,17 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     */</span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_95'/>
-95
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_95'></a>
-<span>
-</span>
-</td>
 <td class=''><pre><span  class=''>    public boolean playerIsOnBoard(int x, int y) {</span></pre></td></tr>
 
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_96'/>
-96
+<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_95'/>
+95
 </td>
 <td class='survived'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_96'>9</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_95'>9</a>
 <span>
 1. playerIsOnBoard : changed conditional boundary &rarr; SURVIVED<br/>
 2. playerIsOnBoard : changed conditional boundary &rarr; SURVIVED<br/>
@@ -1438,6 +1424,20 @@ padding-left: 5px;
 
 <tr>
 <td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_96'/>
+96
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_96'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_97'/>
 97
 </td>
@@ -1447,7 +1447,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    </span></pre></td></tr>
 
 
 <tr>
@@ -1461,7 +1461,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    </span></pre></td></tr>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
 
 
 <tr>
@@ -1475,7 +1475,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+<td class=''><pre><span  class=''>     * Asettaa pelilaudan j&#228;lleen tyhj&#228;ksi</span></pre></td></tr>
 
 
 <tr>
@@ -1489,7 +1489,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * Asettaa pelilaudan j&#228;lleen tyhj&#228;ksi</span></pre></td></tr>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
 
 
 <tr>
@@ -1503,7 +1503,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public void resetBoard() {</span></pre></td></tr>
 
 
 <tr>
@@ -1517,21 +1517,25 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public void resetBoard() {</span></pre></td></tr>
+<td class=''><pre><span  class=''></span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_103'/>
 103
 </td>
-<td class=''>
+<td class='survived'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_103'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_103'>3</a>
 <span>
+1. resetBoard : negated conditional &rarr; SURVIVED<br/>
+2. resetBoard : changed conditional boundary &rarr; KILLED<br/>
+3. resetBoard : Changed increment from 1 to -1 &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''></span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>        for (int x = 0; x &#60; board.getWidth(); x++) {</span></pre></td></tr>
 
 
 <tr>
@@ -1549,7 +1553,7 @@ padding-left: 5px;
 
 </span>
 </td>
-<td class='covered'><pre><span  class='survived'>        for (int x = 0; x &#60; board.getWidth(); x++) {</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>            for (int y = 0; y &#60; board.getWidth(); y++) {</span></pre></td></tr>
 
 
 <tr>
@@ -1559,31 +1563,27 @@ padding-left: 5px;
 </td>
 <td class='survived'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_105'>3</a>
-<span>
-1. resetBoard : negated conditional &rarr; SURVIVED<br/>
-2. resetBoard : changed conditional boundary &rarr; KILLED<br/>
-3. resetBoard : Changed increment from 1 to -1 &rarr; KILLED<br/>
-
-</span>
-</td>
-<td class='covered'><pre><span  class='survived'>            for (int y = 0; y &#60; board.getWidth(); y++) {</span></pre></td></tr>
-
-
-<tr>
-<td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_106'/>
-106
-</td>
-<td class='survived'>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_106'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_105'>1</a>
 <span>
 1. resetBoard : removed call to torusristinolla/logic/Gameboard::setToken &rarr; SURVIVED<br/>
 
 </span>
 </td>
 <td class='covered'><pre><span  class='survived'>                    board.setToken(x, y, Token.EMPTY);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_106'/>
+106
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_106'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            }</span></pre></td></tr>
 
 
 <tr>
@@ -1597,11 +1597,11 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>            }</span></pre></td></tr>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_108'/>
 108
 </td>
@@ -1611,11 +1611,11 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_109'/>
 109
 </td>
@@ -1625,7 +1625,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    </span></pre></td></tr>
 
 
 <tr>
@@ -1639,21 +1639,23 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    </span></pre></td></tr>
+<td class=''><pre><span  class=''>    public void resetGame() {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_111'/>
 111
 </td>
-<td class=''>
+<td class='survived'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_111'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_111'>1</a>
 <span>
+1. resetGame : removed call to torusristinolla/logic/Game::resetBoard &rarr; SURVIVED<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''>    public void resetGame() {</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>        resetBoard();</span></pre></td></tr>
 
 
 <tr>
@@ -1661,15 +1663,13 @@ padding-left: 5px;
 <a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_112'/>
 112
 </td>
-<td class='survived'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_112'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_112'></a>
 <span>
-1. resetGame : removed call to torusristinolla/logic/Game::resetBoard &rarr; SURVIVED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='survived'>        resetBoard();</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.win = false;</span></pre></td></tr>
 
 
 <tr>
@@ -1683,7 +1683,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.win = false;</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>        this.playerInTurn = this.player1;</span></pre></td></tr>
 
 
 <tr>
@@ -1691,13 +1691,15 @@ padding-left: 5px;
 <a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_114'/>
 114
 </td>
-<td class=''>
+<td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_114'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_114'>1</a>
 <span>
+1. resetGame : Replaced integer addition with subtraction &rarr; KILLED<br/>
+
 </span>
 </td>
-<td class='covered'><pre><span  class=''>        this.playerInTurn = this.player1;</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        this.round++;</span></pre></td></tr>
 
 
 <tr>
@@ -1705,19 +1707,17 @@ padding-left: 5px;
 <a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_115'/>
 115
 </td>
-<td class='killed'>
+<td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_115'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_115'></a>
 <span>
-1. resetGame : Replaced integer addition with subtraction &rarr; KILLED<br/>
-
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        this.lap++;</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_116'/>
 116
 </td>
@@ -1727,7 +1727,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    </span></pre></td></tr>
 
 
 <tr>
@@ -1741,37 +1741,37 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    </span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_118'/>
-118
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_118'></a>
-<span>
-</span>
-</td>
 <td class=''><pre><span  class=''>    public boolean isThereAWinner() {</span></pre></td></tr>
 
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_119'/>
-119
+<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_118'/>
+118
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_119'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_118'>1</a>
 <span>
 1. isThereAWinner : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
 
 </span>
 </td>
 <td class='covered'><pre><span  class='killed'>        return win;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_119'/>
+119
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_119'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -1785,7 +1785,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    </span></pre></td></tr>
 
 
 <tr>
@@ -1799,7 +1799,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    </span></pre></td></tr>
+<td class=''><pre><span  class=''>    public void printGameboardInCurrentState() {</span></pre></td></tr>
 
 
 <tr>
@@ -1813,21 +1813,25 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    public void printGameboardInCurrentState() {</span></pre></td></tr>
+<td class=''><pre><span  class=''>        </span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='uncovered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_123'/>
 123
 </td>
-<td class=''>
+<td class='survived'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_123'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_123'>3</a>
 <span>
+1. printGameboardInCurrentState : changed conditional boundary &rarr; NO_COVERAGE<br/>
+2. printGameboardInCurrentState : Changed increment from 1 to -1 &rarr; NO_COVERAGE<br/>
+3. printGameboardInCurrentState : negated conditional &rarr; NO_COVERAGE<br/>
+
 </span>
 </td>
-<td class=''><pre><span  class=''>        </span></pre></td></tr>
+<td class='uncovered'><pre><span  class='survived'>        for(int rivi = 0; rivi &#60; board.getWidth(); rivi++) {</span></pre></td></tr>
 
 
 <tr>
@@ -1845,7 +1849,7 @@ padding-left: 5px;
 
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>        for(int rivi = 0; rivi &#60; board.getWidth(); rivi++) {</span></pre></td></tr>
+<td class='uncovered'><pre><span  class='survived'>            for(int sarake = 0; sarake &#60; board.getWidth(); sarake++) {</span></pre></td></tr>
 
 
 <tr>
@@ -1855,15 +1859,13 @@ padding-left: 5px;
 </td>
 <td class='survived'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_125'>3</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_125'>1</a>
 <span>
-1. printGameboardInCurrentState : changed conditional boundary &rarr; NO_COVERAGE<br/>
-2. printGameboardInCurrentState : Changed increment from 1 to -1 &rarr; NO_COVERAGE<br/>
-3. printGameboardInCurrentState : negated conditional &rarr; NO_COVERAGE<br/>
+1. printGameboardInCurrentState : negated conditional &rarr; NO_COVERAGE<br/>
 
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>            for(int sarake = 0; sarake &#60; board.getWidth(); sarake++) {</span></pre></td></tr>
+<td class='uncovered'><pre><span  class='survived'>                if(board.getToken(rivi,sarake) == Token.CIRCLE) {</span></pre></td></tr>
 
 
 <tr>
@@ -1875,11 +1877,11 @@ padding-left: 5px;
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_126'>1</a>
 <span>
-1. printGameboardInCurrentState : negated conditional &rarr; NO_COVERAGE<br/>
+1. printGameboardInCurrentState : removed call to java/io/PrintStream::print &rarr; NO_COVERAGE<br/>
 
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>                if(board.getToken(rivi,sarake) == Token.CIRCLE) {</span></pre></td></tr>
+<td class='uncovered'><pre><span  class='survived'>                    System.out.print(&#34; O &#34;);</span></pre></td></tr>
 
 
 <tr>
@@ -1891,11 +1893,11 @@ padding-left: 5px;
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_127'>1</a>
 <span>
-1. printGameboardInCurrentState : removed call to java/io/PrintStream::print &rarr; NO_COVERAGE<br/>
+1. printGameboardInCurrentState : negated conditional &rarr; NO_COVERAGE<br/>
 
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>                    System.out.print(&#34; O &#34;);</span></pre></td></tr>
+<td class='uncovered'><pre><span  class='survived'>                } else if(board.getToken(rivi,sarake) == Token.CROSS) {</span></pre></td></tr>
 
 
 <tr>
@@ -1907,22 +1909,6 @@ padding-left: 5px;
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_128'>1</a>
 <span>
-1. printGameboardInCurrentState : negated conditional &rarr; NO_COVERAGE<br/>
-
-</span>
-</td>
-<td class='uncovered'><pre><span  class='survived'>                } else if(board.getToken(rivi,sarake) == Token.CROSS) {</span></pre></td></tr>
-
-
-<tr>
-<td class='uncovered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_129'/>
-129
-</td>
-<td class='survived'>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_129'>1</a>
-<span>
 1. printGameboardInCurrentState : removed call to java/io/PrintStream::print &rarr; NO_COVERAGE<br/>
 
 </span>
@@ -1932,12 +1918,12 @@ padding-left: 5px;
 
 <tr>
 <td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_130'/>
-130
+<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_129'/>
+129
 </td>
 <td class=''>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_130'></a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_129'></a>
 <span>
 </span>
 </td>
@@ -1946,18 +1932,32 @@ padding-left: 5px;
 
 <tr>
 <td class='uncovered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_131'/>
-131
+<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_130'/>
+130
 </td>
 <td class='survived'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_131'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_130'>1</a>
 <span>
 1. printGameboardInCurrentState : removed call to java/io/PrintStream::print &rarr; NO_COVERAGE<br/>
 
 </span>
 </td>
 <td class='uncovered'><pre><span  class='survived'>                    System.out.print(&#34; [] &#34;);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_131'/>
+131
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_131'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>                }</span></pre></td></tr>
 
 
 <tr>
@@ -1971,31 +1971,17 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>                }</span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_133'/>
-133
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_133'></a>
-<span>
-</span>
-</td>
 <td class=''><pre><span  class=''>            }</span></pre></td></tr>
 
 
 <tr>
 <td class='uncovered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_134'/>
-134
+<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_133'/>
+133
 </td>
 <td class='survived'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_134'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_133'>1</a>
 <span>
 1. printGameboardInCurrentState : removed call to java/io/PrintStream::println &rarr; NO_COVERAGE<br/>
 
@@ -2006,6 +1992,20 @@ padding-left: 5px;
 
 <tr>
 <td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_134'/>
+134
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_134'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_135'/>
 135
 </td>
@@ -2015,11 +2015,11 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+<td class='uncovered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_136'/>
 136
 </td>
@@ -2029,7 +2029,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    </span></pre></td></tr>
 
 
 <tr>
@@ -2043,31 +2043,17 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    </span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_138'/>
-138
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_138'></a>
-<span>
-</span>
-</td>
 <td class=''><pre><span  class=''>    public void switchTurn() {</span></pre></td></tr>
 
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_139'/>
-139
+<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_138'/>
+138
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_139'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_138'>1</a>
 <span>
 1. switchTurn : negated conditional &rarr; KILLED<br/>
 
@@ -2078,6 +2064,20 @@ padding-left: 5px;
 
 <tr>
 <td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_139'/>
+139
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_139'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            this.playerInTurn = this.player2;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_140'/>
 140
 </td>
@@ -2087,11 +2087,11 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>            this.playerInTurn = this.player2;</span></pre></td></tr>
+<td class=''><pre><span  class=''>        } else {</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='uncovered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_141'/>
 141
 </td>
@@ -2101,11 +2101,11 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>        } else {</span></pre></td></tr>
+<td class='uncovered'><pre><span  class=''>            this.playerInTurn = this.player1;</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_142'/>
 142
 </td>
@@ -2115,11 +2115,11 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class=''>            this.playerInTurn = this.player1;</span></pre></td></tr>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
 
 
 <tr>
-<td class='na'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_143'/>
 143
 </td>
@@ -2129,11 +2129,11 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
-<td class='covered'>
+<td class='na'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_144'/>
 144
 </td>
@@ -2143,7 +2143,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    </span></pre></td></tr>
 
 
 <tr>
@@ -2157,37 +2157,37 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    </span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_146'/>
-146
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_146'></a>
-<span>
-</span>
-</td>
 <td class=''><pre><span  class=''>    public int getPlayer1Score() {</span></pre></td></tr>
 
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_147'/>
-147
+<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_146'/>
+146
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_147'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_146'>1</a>
 <span>
 1. getPlayer1Score : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
 
 </span>
 </td>
 <td class='covered'><pre><span  class='killed'>        return this.wins.get(player1);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_147'/>
+147
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_147'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -2201,7 +2201,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    </span></pre></td></tr>
 
 
 <tr>
@@ -2215,37 +2215,37 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    </span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_150'/>
-150
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_150'></a>
-<span>
-</span>
-</td>
 <td class=''><pre><span  class=''>    public int getPlayer2Score() {</span></pre></td></tr>
 
 
 <tr>
 <td class='uncovered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_151'/>
-151
+<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_150'/>
+150
 </td>
 <td class='survived'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_151'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_150'>1</a>
 <span>
 1. getPlayer2Score : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; NO_COVERAGE<br/>
 
 </span>
 </td>
 <td class='uncovered'><pre><span  class='survived'>        return this.wins.get(player2);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_151'/>
+151
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_151'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -2259,7 +2259,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+<td class=''><pre><span  class=''>    </span></pre></td></tr>
 
 
 <tr>
@@ -2273,37 +2273,37 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    </span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_154'/>
-154
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_154'></a>
-<span>
-</span>
-</td>
-<td class=''><pre><span  class=''>    public int getLap() {</span></pre></td></tr>
+<td class=''><pre><span  class=''>    public int getRound() {</span></pre></td></tr>
 
 
 <tr>
 <td class='covered'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_155'/>
-155
+<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_154'/>
+154
 </td>
 <td class='killed'>
 <span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_155'>1</a>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_154'>1</a>
 <span>
-1. getLap : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+1. getRound : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        return this.lap;</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        return this.round;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_155'/>
+155
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_155'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -2317,20 +2317,6 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    }</span></pre></td></tr>
-
-
-<tr>
-<td class='na'>
-<a name='org.pitest.mutationtest.report.html.SourceFile@5882b202_157'/>
-157
-</td>
-<td class=''>
-<span class='pop'>
-<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_157'></a>
-<span>
-</span>
-</td>
 <td class=''><pre><span  class=''>}</span></pre></td></tr>
 
 
@@ -2338,63 +2324,73 @@ padding-left: 5px;
 <tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
 
 <tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_35'>35</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_35'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b><init><br/><b>Killed by : </b>torusristinolla.logic.GameTest.playersHaveDifferentTokens(torusristinolla.logic.GameTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
 <td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_36'>36</a></td> 
 <td></td>
 <td>
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_36'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b><init><br/><b>Killed by : </b>torusristinolla.logic.GameTest.playersHaveDifferentTokens(torusristinolla.logic.GameTest)</span></span> negated conditional &rarr; KILLED</p> 
-</td>
-</tr>
-<tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_37'>37</a></td> 
-<td></td>
-<td>
-
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_37'/> 
-
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b><init><br/><b>Killed by : </b>torusristinolla.logic.GameTest.playersHaveDifferentTokens(torusristinolla.logic.GameTest)</span></span> removed call to torusristinolla/logic/Player::changeToken &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_49'>49</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_48'>48</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_49'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_48'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getBoard<br/><b>Killed by : </b>torusristinolla.logic.GameTest.playOneTurnSetsTokenOnTheBoard(torusristinolla.logic.GameTest)</span></span> mutated return of Object value for torusristinolla/logic/Game::getBoard to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_56'>56</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_55'>55</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_56'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_55'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>whosTurn<br/><b>Killed by : </b>torusristinolla.logic.GameTest.whosTurnReturnsPlayerOneInTheBeginning(torusristinolla.logic.GameTest)</span></span> mutated return of Object value for torusristinolla/logic/Game::whosTurn to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>whosTurn<br/><b>Killed by : </b>torusristinolla.logic.GameTest.switchTurnWorks(torusristinolla.logic.GameTest)</span></span> mutated return of Object value for torusristinolla/logic/Game::whosTurn to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_60'>60</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_59'>59</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_60'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_59'/> 
 
 <p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getPlayer1<br/><b>Killed by : </b>none</span></span> mutated return of Object value for torusristinolla/logic/Game::getPlayer1 to ( if (x != null) null else throw new RuntimeException ) &rarr; NO_COVERAGE</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_64'>64</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_63'>63</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_64'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_63'/> 
 
 <p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getPlayer2<br/><b>Killed by : </b>none</span></span> mutated return of Object value for torusristinolla/logic/Game::getPlayer2 to ( if (x != null) null else throw new RuntimeException ) &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_77'>77</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_77'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>playOneTurn<br/><b>Killed by : </b>torusristinolla.logic.GameTest.playOneTurnSetsTokenOnTheBoard(torusristinolla.logic.GameTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>playOneTurn<br/><b>Killed by : </b>torusristinolla.logic.GameTest.playOneTurnSetsTokenOnTheBoard(torusristinolla.logic.GameTest)</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -2404,17 +2400,17 @@ padding-left: 5px;
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_78'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>playOneTurn<br/><b>Killed by : </b>torusristinolla.logic.GameTest.playOneTurnSetsTokenOnTheBoard(torusristinolla.logic.GameTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>playOneTurn<br/><b>Killed by : </b>torusristinolla.logic.GameTest.playOneTurnSetsTokenOnTheBoard(torusristinolla.logic.GameTest)</span></span> negated conditional &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>playOneTurn<br/><b>Killed by : </b>torusristinolla.logic.GameTest.playOneTurnSetsTokenOnTheBoard(torusristinolla.logic.GameTest)</span></span> removed call to torusristinolla/logic/Gameboard::setToken &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_79'>79</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_82'>82</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_79'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_82'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>playOneTurn<br/><b>Killed by : </b>torusristinolla.logic.GameTest.playOneTurnSetsTokenOnTheBoard(torusristinolla.logic.GameTest)</span></span> removed call to torusristinolla/logic/Gameboard::setToken &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>playOneTurn<br/><b>Killed by : </b>torusristinolla.logic.GameTest.afterWinningPlayersScoreIncreases(torusristinolla.logic.GameTest)</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -2424,27 +2420,27 @@ padding-left: 5px;
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_83'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>playOneTurn<br/><b>Killed by : </b>torusristinolla.logic.GameTest.afterWinningPlayersScoreIncreases(torusristinolla.logic.GameTest)</span></span> negated conditional &rarr; KILLED</p> 
-</td>
-</tr>
-<tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_84'>84</a></td> 
-<td></td>
-<td>
-
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_84'/> 
-
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>playOneTurn<br/><b>Killed by : </b>torusristinolla.logic.GameTest.afterWinningPlayersScoreIncreases(torusristinolla.logic.GameTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_96'>96</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_95'>95</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_96'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_95'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>playerIsOnBoard<br/><b>Killed by : </b>torusristinolla.logic.GameTest.playOneTurnSetsTokenOnTheBoard(torusristinolla.logic.GameTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>playerIsOnBoard<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>playerIsOnBoard<br/><b>Killed by : </b>torusristinolla.logic.GameTest.playOneTurnSetsTokenOnTheBoard(torusristinolla.logic.GameTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>playerIsOnBoard<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>playerIsOnBoard<br/><b>Killed by : </b>torusristinolla.logic.GameTest.playOneTurnSetsTokenOnTheBoard(torusristinolla.logic.GameTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>playerIsOnBoard<br/><b>Killed by : </b>torusristinolla.logic.GameTest.playOneTurnSetsTokenOnTheBoard(torusristinolla.logic.GameTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>playerIsOnBoard<br/><b>Killed by : </b>torusristinolla.logic.GameTest.playOneTurnSetsTokenOnTheBoard(torusristinolla.logic.GameTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>8.<span><b>8</b><br/><b>Location : </b>playerIsOnBoard<br/><b>Killed by : </b>torusristinolla.logic.GameTest.playOneTurnSetsTokenOnTheBoard(torusristinolla.logic.GameTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>9.<span><b>9</b><br/><b>Location : </b>playerIsOnBoard<br/><b>Killed by : </b>torusristinolla.logic.GameTest.playerIsOnBoardReturnsFalseWhenCoordinatesNotOnBoard(torusristinolla.logic.GameTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_103'>103</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_103'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>resetBoard<br/><b>Killed by : </b>torusristinolla.logic.GameTest.afterResetGameThereIsNoWinnerYet(torusristinolla.logic.GameTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>resetBoard<br/><b>Killed by : </b>torusristinolla.logic.GameTest.afterResetGameThereIsNoWinnerYet(torusristinolla.logic.GameTest)</span></span> Changed increment from 1 to -1 &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>resetBoard<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</p> 
 </td>
 </tr>
 <tr>
@@ -2454,7 +2450,7 @@ padding-left: 5px;
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_104'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>resetBoard<br/><b>Killed by : </b>torusristinolla.logic.GameTest.afterResetLapChanges(torusristinolla.logic.GameTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>resetBoard<br/><b>Killed by : </b>torusristinolla.logic.GameTest.afterResetLapChanges(torusristinolla.logic.GameTest)</span></span> Changed increment from 1 to -1 &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>resetBoard<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>resetBoard<br/><b>Killed by : </b>torusristinolla.logic.GameTest.afterResetGameThereIsNoWinnerYet(torusristinolla.logic.GameTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>resetBoard<br/><b>Killed by : </b>torusristinolla.logic.GameTest.afterResetGameThereIsNoWinnerYet(torusristinolla.logic.GameTest)</span></span> Changed increment from 1 to -1 &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>resetBoard<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</p> 
 </td>
 </tr>
 <tr>
@@ -2464,47 +2460,47 @@ padding-left: 5px;
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_105'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>resetBoard<br/><b>Killed by : </b>torusristinolla.logic.GameTest.afterResetLapChanges(torusristinolla.logic.GameTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>resetBoard<br/><b>Killed by : </b>torusristinolla.logic.GameTest.afterResetLapChanges(torusristinolla.logic.GameTest)</span></span> Changed increment from 1 to -1 &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>resetBoard<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</p> 
-</td>
-</tr>
-<tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_106'>106</a></td> 
-<td></td>
-<td>
-
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_106'/> 
-
 <p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>resetBoard<br/><b>Killed by : </b>none</span></span> removed call to torusristinolla/logic/Gameboard::setToken &rarr; SURVIVED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_112'>112</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_111'>111</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_112'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_111'/> 
 
 <p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>resetGame<br/><b>Killed by : </b>none</span></span> removed call to torusristinolla/logic/Game::resetBoard &rarr; SURVIVED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_115'>115</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_114'>114</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_115'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_114'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>resetGame<br/><b>Killed by : </b>torusristinolla.logic.GameTest.afterResetLapChanges(torusristinolla.logic.GameTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_119'>119</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_118'>118</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_119'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_118'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isThereAWinner<br/><b>Killed by : </b>torusristinolla.logic.GameTest.inTheBeginningThereIsNoWinner(torusristinolla.logic.GameTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_123'>123</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_123'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>printGameboardInCurrentState<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>printGameboardInCurrentState<br/><b>Killed by : </b>none</span></span> Changed increment from 1 to -1 &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>printGameboardInCurrentState<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</p> 
 </td>
 </tr>
 <tr>
@@ -2524,7 +2520,7 @@ padding-left: 5px;
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_125'/> 
 
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>printGameboardInCurrentState<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>printGameboardInCurrentState<br/><b>Killed by : </b>none</span></span> Changed increment from 1 to -1 &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>printGameboardInCurrentState<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</p> 
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>printGameboardInCurrentState<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</p> 
 </td>
 </tr>
 <tr>
@@ -2534,7 +2530,7 @@ padding-left: 5px;
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_126'/> 
 
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>printGameboardInCurrentState<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</p> 
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>printGameboardInCurrentState<br/><b>Killed by : </b>none</span></span> removed call to java/io/PrintStream::print &rarr; NO_COVERAGE</p> 
 </td>
 </tr>
 <tr>
@@ -2544,7 +2540,7 @@ padding-left: 5px;
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_127'/> 
 
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>printGameboardInCurrentState<br/><b>Killed by : </b>none</span></span> removed call to java/io/PrintStream::print &rarr; NO_COVERAGE</p> 
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>printGameboardInCurrentState<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</p> 
 </td>
 </tr>
 <tr>
@@ -2554,77 +2550,67 @@ padding-left: 5px;
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_128'/> 
 
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>printGameboardInCurrentState<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</p> 
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>printGameboardInCurrentState<br/><b>Killed by : </b>none</span></span> removed call to java/io/PrintStream::print &rarr; NO_COVERAGE</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_129'>129</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_130'>130</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_129'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_130'/> 
 
 <p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>printGameboardInCurrentState<br/><b>Killed by : </b>none</span></span> removed call to java/io/PrintStream::print &rarr; NO_COVERAGE</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_131'>131</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_133'>133</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_131'/> 
-
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>printGameboardInCurrentState<br/><b>Killed by : </b>none</span></span> removed call to java/io/PrintStream::print &rarr; NO_COVERAGE</p> 
-</td>
-</tr>
-<tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_134'>134</a></td> 
-<td></td>
-<td>
-
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_134'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_133'/> 
 
 <p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>printGameboardInCurrentState<br/><b>Killed by : </b>none</span></span> removed call to java/io/PrintStream::println &rarr; NO_COVERAGE</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_139'>139</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_138'>138</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_139'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_138'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>switchTurn<br/><b>Killed by : </b>torusristinolla.logic.GameTest.switchTurnWorks(torusristinolla.logic.GameTest)</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_147'>147</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_146'>146</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_147'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_146'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getPlayer1Score<br/><b>Killed by : </b>torusristinolla.logic.GameTest.inTheBeginningPlayerScoreIsZero(torusristinolla.logic.GameTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_151'>151</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_150'>150</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_151'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_150'/> 
 
 <p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getPlayer2Score<br/><b>Killed by : </b>none</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; NO_COVERAGE</p> 
 </td>
 </tr>
 <tr>
-<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_155'>155</a></td> 
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5882b202_154'>154</a></td> 
 <td></td>
 <td>
 
-<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_155'/> 
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5882b202_154'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getLap<br/><b>Killed by : </b>torusristinolla.logic.GameTest.inTheBeginningThereIsTheFirstLap(torusristinolla.logic.GameTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getRound<br/><b>Killed by : </b>torusristinolla.logic.GameTest.inTheBeginningThereIsTheFirstLap(torusristinolla.logic.GameTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
 </td>
 </tr>
 
@@ -2645,7 +2631,7 @@ padding-left: 5px;
 
 <h2>Tests examined</h2>
 <ul>
-<li>torusristinolla.logic.GameTest.playerIsOnBoardReturnsFalseWhenCoordinatesNotOnBoard(torusristinolla.logic.GameTest) (3 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesHorizontalWinningWorkWithNonVisualWinningLineAndWithLastTokenOnTheFarRight(torusristinolla.logic.WinnerCheckerTest) (5 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenInTheBottomRightCornerOnTheSecondFromTheBottomIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (18 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesVerticalWinningWorkWithNonVisualWinningLineAndWithLastTokenSecondFromTheTop(torusristinolla.logic.WinnerCheckerTest) (0 ms)</li><li>torusristinolla.logic.GameTest.afterResetGameThereIsNoWinnerYet(torusristinolla.logic.GameTest) (2 ms)</li><li>torusristinolla.logic.GameTest.afterWinningPlayersScoreIncreases(torusristinolla.logic.GameTest) (2 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenSecondFromTheLeftAndOnTheBottomRowIfTheTokenIsOnTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (6 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenInTheTopLeftCornerIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (4 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenInTheBottomLeftCornerOnTheSecondRowFromTheBottomIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (6 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenInTheTopLeftCornerIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (5 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenInTheMiddleOfTheBottomRowIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (13 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenOnTheTopLeftCornerIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (4 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenOnTheBottomRowSecondFromTheLeftIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (2 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenOnTheTopRowSecondFromTheRightIfTheTokenIsInTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesVerticalWinningWorkWithNonVisualWinningLineAndWithLastTokenSecondFromTheBottom(torusristinolla.logic.WinnerCheckerTest) (2 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenInTheBottomRightCornerIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (4 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesHorizontalWinningWorkWithNormalVisualWinningLineAndLastTokenOnTheRight(torusristinolla.logic.WinnerCheckerTest) (12 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenOnTheSecondRowFromTheBottomAndOnTheFarLeftIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (4 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesVerticalWinningWorkWithNormalVisualWinningLineAndWithLastTokenOnTheTop(torusristinolla.logic.WinnerCheckerTest) (4 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDiagonalWinningWorkWithNormalVisualAscendingWinningLineAndWithLastTokenOnTheTop(torusristinolla.logic.WinnerCheckerTest) (6 ms)</li><li>torusristinolla.logic.GameTest.playOneTurnSetsTokenOnTheBoard(torusristinolla.logic.GameTest) (2 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesVerticalWinningWorkWithNormalVisualWinningLineAndWithLastTokenOnTheBottom(torusristinolla.logic.WinnerCheckerTest) (0 ms)</li><li>torusristinolla.logic.GameTest.whosTurnReturnsPlayerOneInTheBeginning(torusristinolla.logic.GameTest) (2 ms)</li><li>torusristinolla.logic.GameTest.afterResetGamePlayerInTurnIsPlayerOne(torusristinolla.logic.GameTest) (46 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenSecondFromTheLeftOnTheTopRowIfTheTokenIsOnTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (2 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenOnTheSecondRowFromTheBottomAndSecondFromTheLeftIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (4 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenInTheTopLeftCornerIfTheTokenIsOnTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (24 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenOnTheBottomRowAndSecondFromTheRighIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (3 ms)</li><li>torusristinolla.logic.GameTest.inTheBeginningThereIsTheFirstLap(torusristinolla.logic.GameTest) (9 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenOnTheBottomLeftCornerIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (5 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesVerticalWinningWorkWithNonVisualWinningLineAndWithLastTokenOnTheTop(torusristinolla.logic.WinnerCheckerTest) (2 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenInTheMiddleOfTheSecondColumnFromTheRightIfTheTokenIsInTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (4 ms)</li><li>torusristinolla.logic.GameTest.afterResetLapChanges(torusristinolla.logic.GameTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenOnTheSecondRowFromTheBottomAndOnTheFarRightIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesHorizontalWinningWorkWithNonVisualWinningLineAndWithLastTokenSecondFromTheLeft(torusristinolla.logic.WinnerCheckerTest) (3 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenInTheTopRightCornerIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (5 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenOnTheSecondRowFromTheBottomAndSecondFromTheLeftIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDiagonalWinningWorkWithNormalVisualAscendingWinningLineAndWithLastTokenOnTheBottom(torusristinolla.logic.WinnerCheckerTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesVerticalWinningWorkWithNonVisualWinningLineAndWithLastTokenOnTheBottom(torusristinolla.logic.WinnerCheckerTest) (3 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenInTheMiddleOfTheTopRowIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenOnTheSecondRowFromTheBottomAndOnTheRightIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (10 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenOnTheBottomRightCornerIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (6 ms)</li><li>torusristinolla.logic.GameTest.playersHaveDifferentTokens(torusristinolla.logic.GameTest) (14 ms)</li><li>torusristinolla.logic.GameTest.inTheBeginningPlayerScoreIsZero(torusristinolla.logic.GameTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesHorizontalWinningWorkWithNormalVisualWinningLineAndLastTokenInTheMiddle(torusristinolla.logic.WinnerCheckerTest) (5 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokeOnTheSecondRowSecondFromTheLeftIfTheTokenIsOnTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenInTheMiddleOfTheLeftmostColumnIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (7 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenOnTheBottomRowAndOnTheRightIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (2 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenInTheTopRightCornerIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (4 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDiagonalWinningWorkWithNormalVisualDescendingWinningLineAndWithLastTokenOnTheBottom(torusristinolla.logic.WinnerCheckerTest) (4 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenOnTheFarRightAndOnTheSecondTopRowIfTheTokenIsOnTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (3 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenOnTheTopRightCornerIfTheTokenIsInTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (3 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDiagonalWinningWorkWithNormalVisualDescendingWinningLineAndWithLastTokenInTheMiddle(torusristinolla.logic.WinnerCheckerTest) (4 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenInTheFarRightIfTheTokenIsOnTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (16 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenInTheMiddleOfTheTopRowIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDiagonalWinningWorkWithNormalVisualDescendingWinningLineAndWithLastTokenOnTheTop(torusristinolla.logic.WinnerCheckerTest) (14 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesVerticalWinningWorkWithNormalVisualWinningLineAndWithLastTokenInTheMiddle(torusristinolla.logic.WinnerCheckerTest) (0 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenInTheMiddleOfTheSecondColumnFromTheLeftIfTheTokenIsInTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (3 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenOnTheTopLeftCornerSecondFromTheLeftIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenInTheMiddleOfTheTopRowIfTheTokenIsOnTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDiagonalWinningWorkWithNormalVisualAscendingWinningLineAndWithLastTokenInTheMiddle(torusristinolla.logic.WinnerCheckerTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenOnTheBottomLeftCornertIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (4 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesHorizontalWinningWorkWithNonVisualWinningLineAndWithLastTokenOnTheFarLeft(torusristinolla.logic.WinnerCheckerTest) (4 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenInTheMiddleOfTheRightmostColumnIfTheTokenIsInTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (2 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenInTheMiddleOfTheSecondRowIfTheTokenIsOnTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (2 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenInTheMiddleOfTheRightmostColumnIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (2 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenOnTheBottomLeftCornerIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (5 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenInTheBottomRightCornerIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (5 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenInTheMiddleOfTheTopRowIfTheTokenIsInTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (5 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenInTheMiddleOfTheTopRowIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (12 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDiagonalWinningWorkWithLastTokenInTheMiddleOfTheBottomRowIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenInTheTopRightCornerIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (3 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenInTheMiddleOfTheSecondRowFromTheBottomIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (13 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenOnTheSecondRowFromTheTopSecondFromTheRightIfTheTokenIsInTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (10 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesHorizontalWinningWorkWithNonVisualWinningLineAndWithLastTokenSecondFromTheRight(torusristinolla.logic.WinnerCheckerTest) (2 ms)</li><li>torusristinolla.logic.GameTest.switchTurnWorks(torusristinolla.logic.GameTest) (5 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenInTheBottomLeftCornerIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (2 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesHorizontalWinningWorkWithNormalVisualWinningLineAndLastTokenOnTheLeft(torusristinolla.logic.WinnerCheckerTest) (3 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenOnTheSecondRowFromTheTopAndOnTheFarRightIfTheTokenIsInTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (5 ms)</li><li>torusristinolla.logic.GameTest.inTheBeginningThereIsNoWinner(torusristinolla.logic.GameTest) (1 ms)</li>
+<li>torusristinolla.logic.GameTest.playerIsOnBoardReturnsFalseWhenCoordinatesNotOnBoard(torusristinolla.logic.GameTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesHorizontalWinningWorkWithNonVisualWinningLineAndWithLastTokenOnTheFarRight(torusristinolla.logic.WinnerCheckerTest) (3 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenInTheBottomRightCornerOnTheSecondFromTheBottomIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (2 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesVerticalWinningWorkWithNonVisualWinningLineAndWithLastTokenSecondFromTheTop(torusristinolla.logic.WinnerCheckerTest) (4 ms)</li><li>torusristinolla.logic.GameTest.afterResetGameThereIsNoWinnerYet(torusristinolla.logic.GameTest) (6 ms)</li><li>torusristinolla.logic.GameTest.afterWinningPlayersScoreIncreases(torusristinolla.logic.GameTest) (23 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenSecondFromTheLeftAndOnTheBottomRowIfTheTokenIsOnTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenInTheTopLeftCornerIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (5 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenInTheBottomLeftCornerOnTheSecondRowFromTheBottomIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (2 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenInTheTopLeftCornerIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (3 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenInTheMiddleOfTheBottomRowIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (6 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenOnTheTopLeftCornerIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (2 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenOnTheBottomRowSecondFromTheLeftIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (3 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenOnTheTopRowSecondFromTheRightIfTheTokenIsInTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (2 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesVerticalWinningWorkWithNonVisualWinningLineAndWithLastTokenSecondFromTheBottom(torusristinolla.logic.WinnerCheckerTest) (6 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenInTheBottomRightCornerIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesHorizontalWinningWorkWithNormalVisualWinningLineAndLastTokenOnTheRight(torusristinolla.logic.WinnerCheckerTest) (3 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenOnTheSecondRowFromTheBottomAndOnTheFarLeftIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (3 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDiagonalWinningWorkWithNormalVisualAscendingWinningLineAndWithLastTokenOnTheTop(torusristinolla.logic.WinnerCheckerTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesVerticalWinningWorkWithNormalVisualWinningLineAndWithLastTokenOnTheTop(torusristinolla.logic.WinnerCheckerTest) (2 ms)</li><li>torusristinolla.logic.GameTest.playOneTurnSetsTokenOnTheBoard(torusristinolla.logic.GameTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesVerticalWinningWorkWithNormalVisualWinningLineAndWithLastTokenOnTheBottom(torusristinolla.logic.WinnerCheckerTest) (2 ms)</li><li>torusristinolla.logic.GameTest.whosTurnReturnsPlayerOneInTheBeginning(torusristinolla.logic.GameTest) (3 ms)</li><li>torusristinolla.logic.GameTest.afterResetGamePlayerInTurnIsPlayerOne(torusristinolla.logic.GameTest) (71 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenSecondFromTheLeftOnTheTopRowIfTheTokenIsOnTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenOnTheSecondRowFromTheBottomAndSecondFromTheLeftIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (3 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenInTheTopLeftCornerIfTheTokenIsOnTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (14 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenOnTheBottomRowAndSecondFromTheRighIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (2 ms)</li><li>torusristinolla.logic.GameTest.inTheBeginningThereIsTheFirstLap(torusristinolla.logic.GameTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenOnTheBottomLeftCornerIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (13 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesVerticalWinningWorkWithNonVisualWinningLineAndWithLastTokenOnTheTop(torusristinolla.logic.WinnerCheckerTest) (2 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenInTheMiddleOfTheSecondColumnFromTheRightIfTheTokenIsInTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (9 ms)</li><li>torusristinolla.logic.GameTest.afterResetLapChanges(torusristinolla.logic.GameTest) (51 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenOnTheSecondRowFromTheBottomAndOnTheFarRightIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (3 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesHorizontalWinningWorkWithNonVisualWinningLineAndWithLastTokenSecondFromTheLeft(torusristinolla.logic.WinnerCheckerTest) (4 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenInTheTopRightCornerIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (4 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenOnTheSecondRowFromTheBottomAndSecondFromTheLeftIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDiagonalWinningWorkWithNormalVisualAscendingWinningLineAndWithLastTokenOnTheBottom(torusristinolla.logic.WinnerCheckerTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesVerticalWinningWorkWithNonVisualWinningLineAndWithLastTokenOnTheBottom(torusristinolla.logic.WinnerCheckerTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenInTheMiddleOfTheTopRowIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (3 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenOnTheSecondRowFromTheBottomAndOnTheRightIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenOnTheBottomRightCornerIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (8 ms)</li><li>torusristinolla.logic.GameTest.playersHaveDifferentTokens(torusristinolla.logic.GameTest) (0 ms)</li><li>torusristinolla.logic.GameTest.inTheBeginningPlayerScoreIsZero(torusristinolla.logic.GameTest) (18 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesHorizontalWinningWorkWithNormalVisualWinningLineAndLastTokenInTheMiddle(torusristinolla.logic.WinnerCheckerTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokeOnTheSecondRowSecondFromTheLeftIfTheTokenIsOnTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (3 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenInTheMiddleOfTheLeftmostColumnIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (6 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenOnTheBottomRowAndOnTheRightIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenInTheTopRightCornerIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDiagonalWinningWorkWithNormalVisualDescendingWinningLineAndWithLastTokenOnTheBottom(torusristinolla.logic.WinnerCheckerTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenOnTheFarRightAndOnTheSecondTopRowIfTheTokenIsOnTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (3 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenOnTheTopRightCornerIfTheTokenIsInTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (2 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDiagonalWinningWorkWithNormalVisualDescendingWinningLineAndWithLastTokenInTheMiddle(torusristinolla.logic.WinnerCheckerTest) (2 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenInTheFarRightIfTheTokenIsOnTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (3 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenInTheMiddleOfTheTopRowIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDiagonalWinningWorkWithNormalVisualDescendingWinningLineAndWithLastTokenOnTheTop(torusristinolla.logic.WinnerCheckerTest) (2 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesVerticalWinningWorkWithNormalVisualWinningLineAndWithLastTokenInTheMiddle(torusristinolla.logic.WinnerCheckerTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenInTheMiddleOfTheSecondColumnFromTheLeftIfTheTokenIsInTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (16 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenInTheMiddleOfTheTopRowIfTheTokenIsOnTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (2 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenOnTheTopLeftCornerSecondFromTheLeftIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (9 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenOnTheBottomLeftCornertIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDiagonalWinningWorkWithNormalVisualAscendingWinningLineAndWithLastTokenInTheMiddle(torusristinolla.logic.WinnerCheckerTest) (2 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesHorizontalWinningWorkWithNonVisualWinningLineAndWithLastTokenOnTheFarLeft(torusristinolla.logic.WinnerCheckerTest) (47 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenInTheMiddleOfTheSecondRowIfTheTokenIsOnTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenInTheMiddleOfTheRightmostColumnIfTheTokenIsInTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (25 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenInTheMiddleOfTheRightmostColumnIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (85 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenOnTheBottomLeftCornerIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (5 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenInTheBottomRightCornerIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (2 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenInTheMiddleOfTheTopRowIfTheTokenIsInTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (5 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenInTheMiddleOfTheTopRowIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (63 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenInTheTopRightCornerIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (1 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDiagonalWinningWorkWithLastTokenInTheMiddleOfTheBottomRowIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (7 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenInTheMiddleOfTheSecondRowFromTheBottomIfTheTokenIsOnTheTopOfTheLine(torusristinolla.logic.WinnerCheckerTest) (2 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenOnTheSecondRowFromTheTopSecondFromTheRightIfTheTokenIsInTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (2 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesHorizontalWinningWorkWithNonVisualWinningLineAndWithLastTokenSecondFromTheRight(torusristinolla.logic.WinnerCheckerTest) (2 ms)</li><li>torusristinolla.logic.GameTest.switchTurnWorks(torusristinolla.logic.GameTest) (3 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesDescendingDiagonalWinningWorkWithLastTokenInTheBottomLeftCornerIfTheTokenIsInTheMiddleOfTheLine(torusristinolla.logic.WinnerCheckerTest) (11 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesHorizontalWinningWorkWithNormalVisualWinningLineAndLastTokenOnTheLeft(torusristinolla.logic.WinnerCheckerTest) (7 ms)</li><li>torusristinolla.logic.WinnerCheckerTest.doesAscendingDiagonalWinningWorkWithLastTokenOnTheSecondRowFromTheTopAndOnTheFarRightIfTheTokenIsInTheBottomOfTheLine(torusristinolla.logic.WinnerCheckerTest) (1 ms)</li><li>torusristinolla.logic.GameTest.inTheBeginningThereIsNoWinner(torusristinolla.logic.GameTest) (1 ms)</li>
 </ul>
 
 <br/>

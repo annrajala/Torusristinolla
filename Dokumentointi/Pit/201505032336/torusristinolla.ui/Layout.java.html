@@ -310,7 +310,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>    private Label lap;</span></pre></td></tr>
+<td class=''><pre><span  class=''>    private Label round;</span></pre></td></tr>
 
 
 <tr>
@@ -980,7 +980,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class=''>        ActionListener resetGameListener = new ResetGameListener(this);</span></pre></td></tr>
+<td class='uncovered'><pre><span  class=''>        ActionListener resetGameListener = new NewGameListener(this);</span></pre></td></tr>
 
 
 <tr>
@@ -994,7 +994,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class=''>        JMenuItem reset = new JMenuItem(&#34;Reset game&#34;);</span></pre></td></tr>
+<td class='uncovered'><pre><span  class=''>        JMenuItem reset = new JMenuItem(&#34;New game&#34;);</span></pre></td></tr>
 
 
 <tr>
@@ -1108,7 +1108,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class=''>        this.lap = new Label(&#34;Lap: &#34; + game.getLap());</span></pre></td></tr>
+<td class='uncovered'><pre><span  class=''>        this.round = new Label(&#34;Round: &#34; + game.getRound());</span></pre></td></tr>
 
 
 <tr>
@@ -1192,7 +1192,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class=''>        situation.add(lap);</span></pre></td></tr>
+<td class='uncovered'><pre><span  class=''>        situation.add(round);</span></pre></td></tr>
 
 
 <tr>
@@ -1424,7 +1424,7 @@ padding-left: 5px;
 <span>
 </span>
 </td>
-<td class=''><pre><span  class=''>     * Resettaa pelilaudan ja pelin. </span></pre></td></tr>
+<td class=''><pre><span  class=''>     * Resettaa pelilaudan ja pelin. Piirt&#228;&#228; komponentit uudelleen.</span></pre></td></tr>
 
 
 <tr>
