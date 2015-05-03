@@ -4,10 +4,6 @@ import java.util.HashMap;
 
 /**
  * Luokka huolehtii vuoron pelaamisista. Voittoon riittää 3 merkin voittosuora.
- * 
- * @param win true, jos pelissä on voittaja
- * @param playerInTurn vuorossa oleva pelaaja
- * 
  */
 
 public class Game {

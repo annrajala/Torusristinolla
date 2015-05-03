@@ -77,6 +77,10 @@ TUNTIKIRJANPITO
 - logiikan testauksen jatkoa
 - sekvenssikaavio
 
-28.4. tiistai ? h
+28.4. tiistai 4 h
 - työn viimeistelyä
 - dokumentoinnin täydentämistä
+
+3.5. sunnuntai 5 h
+- dokumentoinnin täydentämistä
+- tarkistamista
